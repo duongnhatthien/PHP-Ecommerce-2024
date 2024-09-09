@@ -1,0 +1,15 @@
+{
+    "name": "dangk/php-ecommerce",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "accountgithub2003",
+            "email": "95201020+duongnhatthien@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
