@@ -1,13 +1,13 @@
 <?php
 namespace app\core;
-class Application
+class Application   
 {
     public static Application $app;
     public static string $ROOT_DIR;
     public Router $router;
     public Request $request;
     public Response $response;
-    public Controller $controller;
+    public ?Controller $controller=null;
     public function __construct($rootPath)
     {
         self::$app = $this;
