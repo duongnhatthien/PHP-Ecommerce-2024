@@ -13,5 +13,7 @@
       "email": "95201020+duongnhatthien@users.noreply.github.com"
     }
   ],
-  "require": {}
+  "require": {
+    "vlucas/phpdotenv": "^5.6"
+  }
 }

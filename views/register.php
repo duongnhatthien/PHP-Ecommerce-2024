@@ -5,7 +5,7 @@
                 <img class="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg"
                     alt="logo"> Flowbite </a>
         </div>
-        <form>
+        <form action="" method="post">
             <div class="space-y-6">
                 <div>
                     <label class="text-gray-800 text-sm mb-2 block">Email Id</label>
@@ -35,7 +35,7 @@
                 </div>
             </div>
             <div class="!mt-12">
-                <button type="button"
+                <button type="submit"
                     class="w-full py-3 px-4 text-sm tracking-wider font-semibold rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none">
                     Create an account </button>
             </div>
