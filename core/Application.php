@@ -22,6 +22,9 @@ class Application
 
     public function run()
     {
+        if (!isset($this->controller)) {
+            $this->controller = new Controller();
+        }
         echo $this->router->resolve();
     }
 

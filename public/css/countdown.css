@@ -1,0 +1,47 @@
+.timesale {
+  background-color: #634c9f;
+  font-family: Arial, sans-serif;
+  height: 58px;
+}
+.delivery_event {
+  margin: -15px 0px 0px 0px;
+  font-size: 13px;
+  width: fit-content;
+}
+.countdown {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  width: fit-content;
+}
+.countdown div {
+  display: inline-block;
+  padding: 1px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+.countdown span {
+  color: rgb(199, 199, 199);
+}
+/*Information*/
+.infor li a {
+  color: grey;
+}
+.divInput {
+  position: relative;
+}
+.divInput:hover input {
+  background-color: rgb(216, 215, 215);
+}
+.divInput input {
+  background-color: rgb(236, 235, 235);
+  outline-color: #634c9f;
+  border-radius: 6px;
+}
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Để biểu tượng không chặn các sự kiện chuột */
+  font-size: 16px;
+}

@@ -48,7 +48,7 @@ class Router
     
     protected function layoutContent()
     {
-        $layout = 'main'; // Default layout
+        $layout = ''; // Default layout
         if (Application::$app->controller) {
             $layout = Application::$app->controller->layout;
         }
