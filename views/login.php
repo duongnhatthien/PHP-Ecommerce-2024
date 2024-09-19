@@ -7,12 +7,23 @@
     <title>Login Page</title>
     <!-- Kết nối tệp CSS dành riêng cho trang login -->
     <link rel="stylesheet" href="/css/login.css">
+    <style>
+    @media (min-width: 768px) {
+        .container {
+            max-width: 98%;
+        }
+    }
 
+    @media (min-width: 640px) {
+        .container {
+            max-width: 98%;
+        }
+    }
+    </style>
 </head>
 
 <body>
     <div class="container">
-
         <div class="form-container">
             <div class="flex flex-col w-full">
                 <ul class="flex text-3xl gap-5" style="justify-content:center;color:black">
