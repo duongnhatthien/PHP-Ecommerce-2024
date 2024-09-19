@@ -41,6 +41,52 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("count now:" + count);
     }
   });
+
+  //Carousel
+  const indicators = document.querySelectorAll(".indicator");
+  const totalSlides = indicators.length;
+
+  function updateIndicators(activeIndex) {
+    indicators.forEach((indicator, index) => {
+      indicator.classList.toggle("bg-purple-500", index === activeIndex);
+      indicator.classList.toggle("bg-gray-500", index !== activeIndex);
+    });
+  }
+
+  // Khởi tạo các chỉ báo
+  updateIndicators(0); // Đặt chỉ báo đầu tiên là hoạt động
+
+  // Lắng nghe sự kiện chuyển slide
+  document.querySelectorAll("[data-carousel-item]").forEach((item, index) => {
+    item.addEventListener("transitionend", () => {
+      const activeIndex = [...item.parentNode.children].indexOf(item);
+      updateIndicators(activeIndex);
+    });
+  });
+
+  // Nếu bạn có nút trước/sau để thay đổi slide
+  document
+    .querySelector("[data-carousel-prev]")
+    .addEventListener("click", function () {
+      const activeIndex = (getActiveIndex() - 1 + totalSlides) % totalSlides;
+      updateIndicators(activeIndex);
+    });
+
+  document
+    .querySelector("[data-carousel-next]")
+    .addEventListener("click", function () {
+      const activeIndex = (getActiveIndex() + 1) % totalSlides;
+      updateIndicators(activeIndex);
+    });
+
+  function getActiveIndex() {
+    for (let i = 0; i < indicators.length; i++) {
+      if (indicators[i].getAttribute("aria-current") === "true") {
+        return i;
+      }
+    }
+    return 0;
+  }
 });
 
 $(document).ready(function () {

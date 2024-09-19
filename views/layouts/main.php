@@ -287,7 +287,7 @@
         </nav>
         <!--sidebar pc-->
         <div class="flex justify-between w-full">
-            <div class="AddAnimate ManageSB Sidebar sm:hidden md:hidden lg:block p-3 m-0"
+            <div class="AddAnimate ManageSB Sidebar hidden lg:block p-3 m-0"
                 style="border:0.5px solid rgb(224, 224, 224);border-radius:10px;z-index:12;width:30%;height: fit-content;">
                 <ul style="max-width: 100%;">
                     <li>
@@ -1352,89 +1352,58 @@
                     </li>
                 </ul>
                 <hr>
-                <div class="mt-5 m-auto" id="carouselExampleCaptions" class="relative" style="width: 98%;"
-                    data-twe-carousel-init data-twe-ride="carousel">
-                    <!--Carousel indicators-->
-                    <div class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
-                        data-twe-carousel-indicators>
-                        <button type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide-to="0"
-                            data-twe-carousel-active
-                            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-                            aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide-to="1"
-                            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide-to="2"
-                            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-                            aria-label="Slide 3"></button>
-                    </div>
-
-                    <!--Carousel items-->
-                    <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
-                        <!--First item-->
-                        <div class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                            data-twe-carousel-active data-twe-carousel-item style="backface-visibility: hidden">
-                            <img src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(15).jpg" class="block w-full"
-                                alt="..." />
-                            <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-                                <h5 class="text-xl">First slide label</h5>
-                                <p>
-                                    Some representative placeholder content for the first slide.
-                                </p>
-                            </div>
+                <div id="default-carousel" class="relative w-full mt-5" data-carousel="slide">
+                    <div class="relative z-0 h-56 overflow-hidden rounded-lg md:h-96">
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="http://localhost/images/carousel1.PNG"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="...">
                         </div>
-                        <!--Second item-->
-                        <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                            data-twe-carousel-item style="backface-visibility: hidden">
-                            <img src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(22).jpg" class="block w-full"
-                                alt="..." />
-                            <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-                                <h5 class="text-xl">Second slide label</h5>
-                                <p>
-                                    Some representative placeholder content for the second slide.
-                                </p>
-                            </div>
+                        <div class="hidden z-0 duration-700 ease-in-out" data-carousel-item>
+                            <img src="http://localhost/images/carousel2.PNG"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="...">
                         </div>
-                        <!--Third item-->
-                        <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-                            data-twe-carousel-item style="backface-visibility: hidden">
-                            <img src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(23).jpg" class="block w-full"
-                                alt="..." />
-                            <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-                                <h5 class="text-xl">Third slide label</h5>
-                                <p>
-                                    Some representative placeholder content for the third slide.
-                                </p>
-                            </div>
+                        <div class="hidden z-0 duration-700 ease-in-out" data-carousel-item>
+                            <img src="http://localhost/images/carousel3.PNG"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="...">
                         </div>
                     </div>
+                    <div style="background-color: #634c9f;border-radius: 10px;padding:5px;transform: translateY(50%);"
+                        class="bg-gray-300 absolute z-0 flex -translate-x-1/2 left-1/2 bottom-0 space-x-1 rtl:space-x-reverse">
+                        <button type="button" class="indicator w-2 h-2 rounded-full bg-gray" aria-current="true"
+                            aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                        <button type="button" class="indicator w-2 h-2 rounded-full bg-gray" aria-current="false"
+                            aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                        <button type="button" class="indicator w-2 h-2 rounded-full bg-gray" aria-current="false"
+                            aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                    </div>
 
-                    <!--Carousel controls - prev item-->
-                    <!-- <button
-                        class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-                        type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide="prev">
-                        <span class="inline-block h-8 w-8">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="h-6 w-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    <button type="button"
+                        class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group"
+                        data-carousel-prev>
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/10 group-hover:bg-white/50">
+                            <svg class="w-4 h-4" style="color:#634c9f" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M5 1 1 5l4 4" />
                             </svg>
                         </span>
+                    </button>
+                    <button type="button"
+                        class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group"
+                        data-carousel-next>
                         <span
-                            class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Previous</span>
-                    </button> -->
-                    <!--Carousel controls - next item-->
-                    <!-- <button
-                        class="absolute bottom-0 right-0 top-0 z-0 flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-                        type="button" data-twe-target="#carouselExampleCaptions" data-twe-slide="next">
-                        <span class="inline-block h-8 w-8">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="h-6 w-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/10 group-hover:bg-white/50">
+                            <svg class="w-4 h-4" style="color:#634c9f" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 9 4-4-4-4" />
                             </svg>
                         </span>
-                        <span
-                            class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Next</span>
-                    </button> -->
+                    </button>
                 </div>
             </div>
 
@@ -1909,25 +1878,71 @@
             <!-- Navbar section end -->
 
         </div>
-        <div class="container"> {{content}} </div>
-        <div class="max-w-sm rounded overflow-hidden shadow-lg">
-            <img class="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains">
-            <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-                <p class="text-gray-700 text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et
-                    perferendis eaque, exercitationem praesentium nihil.
-                </p>
+        <div
+            class="view1 flex mt-4 flex-col sm:flex-row md:flex-row lg:flex-row lg:items-center justify-between w-full">
+            <div class="ms-0 left flex flex-col lg:flex-row w-full sm:w-1/2 md:w-1/2 lg:w-1/2">
+                <div class="item1 m-0 flex flex-row items-center justify-between w-full lg:w-1/2">
+                    <div class="left w-1/6 sm:w-1/4 md:w-1/4 lg:w-1/4">
+                        <div class="">
+                            <img src="http://localhost/images/image.PNG" class="w-full h-full" alt="">
+                        </div>
+                    </div>
+                    <div class="right w-5/6 sm:w-3/4 md:w-3/4 lg:w-2/3 flex flex-col items-center justify-between ">
+                        <div class="right1 w-full ms-0 font-bold">Payment only online
+                        </div>
+                        <div class="right w-full text-sm" style="color:gray"> Tasigförsamhet beteendedesign. Mobile
+                            checkout. Ylig
+                            kärrtorpa.</div>
+                    </div>
+                </div>
+                <div class="item1 m-0 flex flex-row items-center justify-between w-full lg:w-1/2">
+                    <div class="left w-1/6 sm:w-1/4 md:w-1/4 lg:w-1/4">
+                        <div class="">
+                            <img src="http://localhost/images/image1.PNG" class="w-full h-full" alt="">
+                        </div>
+                    </div>
+                    <div class="rightw-5/6 sm:w-3/4 md:w-3/4 lg:w-2/3 flex flex-col items-center justify-between">
+                        <div class="right1 w-full ms-0 font-bold">New stocks and sales</div>
+                        <div class="right w-full text-sm" style="color:gray">
+                            Tasigförsamhet beteendedesign. Mobile checkout. Ylig kärrtorpa.</div>
+                    </div>
+                </div>
             </div>
-            <div class="px-6 pt-4 pb-2">
-                <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-                <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-                <span
-                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+            <div class="ms-0 right flex flex-col lg:flex-row sm:w-1/2 md:w-1/2 lg:w-1/2">
+                <div class="item1  m-0 flex flex-row items-center justify-between w-full lg:w-1/2">
+                    <div class="left w-1/6 sm:w-1/4 md:w-1/4 lg:w-1/4">
+                        <div class="">
+                            <img src="http://localhost/images/image2.PNG" class="w-full h-full" alt="">
+
+                        </div>
+                    </div>
+                    <div class="right w-5/6 sm:w-3/4 md:w-3/4 lg:w-2/3 flex flex-col items-center justify-between">
+                        <div class="right1 w-full ms-0 font-bold">Quality assurance</div>
+                        <div class="right w-full text-sm" style="color:gray">
+                            Tasigförsamhet beteendedesign. Mobile checkout. Ylig kärrtorpa.</div>
+                    </div>
+                </div>
+                <div class="item1  m-0 flex flex-row items-center justify-between w-full lg:w-1/2">
+                    <div class="left w-1/6 sm:w-1/4 md:w-1/4 lg:w-1/4">
+                        <div class="">
+                            <img src="http://localhost/images/image3.PNG" class="w-full h-full" alt="">
+
+                        </div>
+                    </div>
+                    <div class="right w-5/6 sm:w-3/4 md:w-3/4 lg:w-2/3 flex flex-col items-center justify-between">
+                        <div class="right1 w-full ms-0 font-bold">Delivery from 1 hour</div>
+                        <div class="right w-full text-sm" style="color:gray">
+                            Tasigförsamhet beteendedesign. Mobile checkout. Ylig kärrtorpa.</div>
+                    </div>
+                </div>
             </div>
+
         </div>
+        <br>
+
+        <hr>
+        <div class="content flex flex-row justify-between"> {{content}} </div>
+
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
