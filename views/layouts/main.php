@@ -1939,11 +1939,821 @@
 
         </div>
         <br>
-
         <hr>
-        <div class="content flex flex-row justify-between"> {{content}} </div>
+        <div
+            class="view2 w-full flex items-center flex-col justify-between sm:flex-col md:flex-row gap-4 lg:flex-row mt-7">
+            <div class="item1 w-3/4"><img src="http://localhost/images/imgview1.PNG" class="w-full" alt="...">
+            </div>
+            <div class="item2 w-3/4 "><img src="http://localhost/images/imgview2.PNG" class="w-full" alt="..."></div>
+            <div class="item3 w-3/4 "><img src="http://localhost/images/imgview3.PNG" class="w-full" alt="..."></div>
+        </div>
+
+        <div class="w-full mt-4 flex items-center justify-between flex-row">
+            <div class="ms-0" style="width: 93%;">
+                <span class="font-bold text-lg ms-0">New Arrivals
+                </span><span class="text-sm ms-0" style="color:gray">Dont miss this opportunity at a special discount
+                    just
+                    for
+                    this week.
+                </span>
+            </div>
+            <span
+                style="transform: translateY(30%); border-radius: 10px;border:1px solid #c2c2c2;background-color: white;"
+                class="w-26 p-0 h-7 ml-0">View
+                All
+                -></span>
+        </div>
+        <div
+            class="view2 w-full flex items-center flex-col justify-between sm:flex-col md:flex-row gap-7 lg:flex-row mt-7">
+            <div class="item1 w-1/4"><img src="http://localhost/images/img2view1.PNG" class="w-full" alt="...">
+            </div>
+            <div class="item2 w-1/4 "><img src="http://localhost/images/img2view2.PNG" class="w-full" alt="..."></div>
+            <div class="item3 w-1/4 "><img src="http://localhost/images/img2view3.PNG" class="w-full" alt="..."></div>
+            <div class="item3 w-1/4 "><img src="http://localhost/images/img2view4.PNG" class="w-full" alt="..."></div>
+        </div>
+
+        <div class="w-full mt-4 mb-4 flex items-center justify-between flex-row">
+            <div class="ms-0" style="width: 93%;">
+                <span class="font-bold text-lg ms-0">Featured Products
+                </span><span class="text-sm ms-0" style="color:gray">
+                    Do not miss the current offers until the end of March.
+                </span>
+            </div>
+            <span
+                style="transform: translateY(30%); border-radius: 10px;border:1px solid #c2c2c2;background-color: white;"
+                class="w-26 p-0 h-7 ml-0">View
+                All
+                -></span>
+        </div>
+        <div class="w-full mt-4 mb-4 flex items-center justify-between flex-row">
+            <div class="ms-0" style="width: 93%;">
+                <span class="font-bold text-lg ms-0">Best Sellers
+                </span><span class="text-sm ms-0" style="color:gray">
+                    Some of the new products arriving this weeks
+                </span>
+            </div>
+            <span
+                style="transform: translateY(30%); border-radius: 10px;border:1px solid #c2c2c2;background-color: white;"
+                class="w-26 p-0 h-7 ml-0">View
+                All
+                -></span>
+        </div>
+        <div class="w-full ms-0"><img class="w-full" src="http://localhost/images/adsfooter.PNG"
+                style="border-radius: 10px;" alt="...">
+        </div>
+
+        <div class="w-full mt-4 flex items-center justify-between flex-row">
+            <div class="ms-0" style="width: 93%;">
+                <span class="font-bold text-lg ms-0">Popular Companies
+                </span><span class="text-sm ms-0" style="color:gray">
+                    Some of the new products arriving this weeks
+                </span>
+            </div>
+            <span
+                style="transform: translateY(30%); border-radius: 10px;border:1px solid #c2c2c2;background-color: white;"
+                class="w-26 p-0 h-7 ml-0">View
+                All
+                -></span>
+        </div>
+        <!-- Footer -->
+        <div class="w-full max-w-screen-xl mt-6 gap-0 flex flex-row justify-between items-center">
+            <!-- CT 1 -->
+            <div class="flex items-start w-1/2 m-0">
+                <div class="flex-shrink-0 m-0">
+                    <div class="inline-block relative m-0">
+                        <div class="relative m-0 w-16 h-16 rounded-full overflow-hidden">
+                            <img class="m-0 absolute top-0 left-0 w-full h-full bg-cover object-fit object-cover"
+                                src="https://picsum.photos/id/646/200/200" alt="Profile picture">
+                            <div class=" m-0absolute top-0 left-0 w-full h-full rounded-full shadow-inner"></div>
+                        </div>
+                        <svg class="m-0 fill-current text-white bg-green-600 rounded-full p-1 absolute bottom-0 right-0 w-6 h-6 -mx-1 -my-1"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path
+                                d="M19 11a7.5 7.5 0 0 1-3.5 5.94L10 20l-5.5-3.06A7.5 7.5 0 0 1 1 11V3c3.38 0 6.5-1.12 9-3 2.5 1.89 5.62 3 9 3v8zm-9 1.08l2.92 2.04-1.03-3.41 2.84-2.15-3.56-.08L10 5.12 8.83 8.48l-3.56.08L8.1 10.7l-1.03 3.4L10 12.09z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="ml-6 m-0">
+                    <p class="m-0">
+                        <span class="text-gray-600 font-bold">Ngọc</span>
+                        <span class="ml-2 text-green-600 text-xs">Verified Buyer</span>
+                    </p>
+                    <div class="flex items-center justify-evenly gap-0 m-0">
+                        <svg class="w-4 h-4 m-0 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                        </svg>
+                        <svg class="w-4 h-4 m-0 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                        </svg>
+                        <svg class="w-4 h-4 m-0 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                        </svg>
+                        <svg class="w-4 h-4 m-0 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                        </svg>
+                        <svg class="w-4 h-4 ms-0 fill-current text-gray-400" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                        </svg>
+                    </div>
+                    <div class="flex items-center ms-0 mt-4 text-gray-600">
+                        <div class="flex ms-0 items-center">
+                            <span class="text-sm">Product Quality</span>
+                            <div class="flex items-center ml-2">
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-gray-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="ms-0 flex items-center ml-4">
+                            <span class="text-sm ms-0">Purchasing Experience</span>
+                            <div class="ms-0 flex items-center ml-2">
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-gray-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-gray-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <span class="font-bold">8888 Company</span>
+                        <p class="mt-1">Our business supports the environment and the society</p>
+                    </div>
+                    <div class="flex items-center justify-between mt-4 text-sm text-gray-600 fill-current">
+                        <button class="flex items-center">
+                            <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path
+                                    d="M5.08 12.16A2.99 2.99 0 0 1 0 10a3 3 0 0 1 5.08-2.16l8.94-4.47a3 3 0 1 1 .9 1.79L5.98 9.63a3.03 3.03 0 0 1 0 .74l8.94 4.47A2.99 2.99 0 0 1 20 17a3 3 0 1 1-5.98-.37l-8.94-4.47z" />
+                            </svg>
+                            <span class="ml-2">Share</span>
+                        </button>
+                        <div class="flex items-center">
+                            <span>Was this review helplful?</span>
+                            <button class="flex items-center ml-6">
+                                <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path
+                                        d="M11 0h1v3l3 7v8a2 2 0 0 1-2 2H5c-1.1 0-2.31-.84-2.7-1.88L0 12v-2a2 2 0 0 1 2-2h7V2a2 2 0 0 1 2-2zm6 10h3v10h-3V10z" />
+                                </svg>
+                                <span class="ml-2">56</span>
+                            </button>
+                            <button class="flex items-center ml-4">
+                                <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path
+                                        d="M11 20a2 2 0 0 1-2-2v-6H2a2 2 0 0 1-2-2V8l2.3-6.12A3.11 3.11 0 0 1 5 0h8a2 2 0 0 1 2 2v8l-3 7v3h-1zm6-10V0h3v10h-3z" />
+                                </svg>
+                                <span class="ml-2">10</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CT 2 -->
+            <div class="flex items-start w-1/2 m-0">
+                <div class="flex-shrink-0 m-0">
+                    <div class="inline-block relative m-0">
+                        <div class="relative m-0 w-16 h-16 rounded-full overflow-hidden">
+                            <img class="m-0 absolute top-0 left-0 w-full h-full bg-cover object-fit object-cover"
+                                src="http://localhost/images/User1.PNG" alt="Profile picture">
+                            <div class=" m-0absolute top-0 left-0 w-full h-full rounded-full shadow-inner"></div>
+                        </div>
+                        <svg class="m-0 fill-current text-white bg-green-600 rounded-full p-1 absolute bottom-0 right-0 w-6 h-6 -mx-1 -my-1"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path
+                                d="M19 11a7.5 7.5 0 0 1-3.5 5.94L10 20l-5.5-3.06A7.5 7.5 0 0 1 1 11V3c3.38 0 6.5-1.12 9-3 2.5 1.89 5.62 3 9 3v8zm-9 1.08l2.92 2.04-1.03-3.41 2.84-2.15-3.56-.08L10 5.12 8.83 8.48l-3.56.08L8.1 10.7l-1.03 3.4L10 12.09z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="ml-6 m-0">
+                    <p class="m-0">
+                        <span class="text-gray-600 font-bold">Nguyên</span>
+                        <span class="ml-2 text-green-600 text-xs">Verified Buyer</span>
+                    </p>
+                    <div class="flex items-center justify-evenly gap-0 m-0">
+                        <svg class="w-4 h-4 m-0 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                        </svg>
+                        <svg class="w-4 h-4 m-0 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                        </svg>
+                        <svg class="w-4 h-4 m-0 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                        </svg>
+                        <svg class="w-4 h-4 m-0 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                        </svg>
+                        <svg class="w-4 h-4 ms-0 fill-current text-gray-400" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                        </svg>
+                    </div>
+                    <div class="flex items-center ms-0 mt-4 text-gray-600">
+                        <div class="flex ms-0 items-center">
+                            <span class="text-sm">Product Quality</span>
+                            <div class="flex items-center ml-2">
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-gray-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="ms-0 flex items-center ml-4">
+                            <span class="text-sm ms-0">Purchasing Experience</span>
+                            <div class="ms-0 flex items-center ml-2">
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-gray-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-gray-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <span class="font-bold">9999 Company</span>
+                        <p class="mt-1">Good quality product can only be found in good stores</p>
+                    </div>
+                    <div class="flex items-center justify-between mt-4 text-sm text-gray-600 fill-current">
+                        <button class="flex items-center">
+                            <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path
+                                    d="M5.08 12.16A2.99 2.99 0 0 1 0 10a3 3 0 0 1 5.08-2.16l8.94-4.47a3 3 0 1 1 .9 1.79L5.98 9.63a3.03 3.03 0 0 1 0 .74l8.94 4.47A2.99 2.99 0 0 1 20 17a3 3 0 1 1-5.98-.37l-8.94-4.47z" />
+                            </svg>
+                            <span class="ml-2">Share</span>
+                        </button>
+                        <div class="flex items-center">
+                            <span>Was this review helplful?</span>
+                            <button class="flex items-center ml-6">
+                                <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path
+                                        d="M11 0h1v3l3 7v8a2 2 0 0 1-2 2H5c-1.1 0-2.31-.84-2.7-1.88L0 12v-2a2 2 0 0 1 2-2h7V2a2 2 0 0 1 2-2zm6 10h3v10h-3V10z" />
+                                </svg>
+                                <span class="ml-2">56</span>
+                            </button>
+                            <button class="flex items-center ml-4">
+                                <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path
+                                        d="M11 20a2 2 0 0 1-2-2v-6H2a2 2 0 0 1-2-2V8l2.3-6.12A3.11 3.11 0 0 1 5 0h8a2 2 0 0 1 2 2v8l-3 7v3h-1zm6-10V0h3v10h-3z" />
+                                </svg>
+                                <span class="ml-2">10</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CT 3 -->
+        <div class="w-full max-w-screen-xl mt-6 flex flex-row justify-between items-center">
+            <div class="flex items-start w-1/2 m-0">
+                <div class="flex-shrink-0 m-0">
+                    <div class="inline-block relative m-0">
+                        <div class="relative m-0 w-16 h-16 rounded-full overflow-hidden">
+                            <img class="m-0 absolute top-0 left-0 w-full h-full bg-cover object-fit object-cover"
+                                src="http://localhost/images/User2.PNG" alt="Profile picture">
+                            <div class=" m-0absolute top-0 left-0 w-full h-full rounded-full shadow-inner"></div>
+                        </div>
+                        <svg class="m-0 fill-current text-white bg-green-600 rounded-full p-1 absolute bottom-0 right-0 w-6 h-6 -mx-1 -my-1"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path
+                                d="M19 11a7.5 7.5 0 0 1-3.5 5.94L10 20l-5.5-3.06A7.5 7.5 0 0 1 1 11V3c3.38 0 6.5-1.12 9-3 2.5 1.89 5.62 3 9 3v8zm-9 1.08l2.92 2.04-1.03-3.41 2.84-2.15-3.56-.08L10 5.12 8.83 8.48l-3.56.08L8.1 10.7l-1.03 3.4L10 12.09z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="ml-6 m-0">
+                    <p class="m-0">
+                        <span class="text-gray-600 font-bold">Khoa</span>
+                        <span class="ml-2 text-green-600 text-xs">Verified Buyer</span>
+                    </p>
+                    <div class="flex items-center justify-evenly gap-0 m-0">
+                        <svg class="w-4 h-4 m-0 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                        </svg>
+                        <svg class="w-4 h-4 m-0 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                        </svg>
+                        <svg class="w-4 h-4 m-0 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                        </svg>
+                        <svg class="w-4 h-4 m-0 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                        </svg>
+                        <svg class="w-4 h-4 ms-0 fill-current text-gray-400" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                        </svg>
+                    </div>
+                    <div class="flex items-center ms-0 mt-4 text-gray-600">
+                        <div class="flex ms-0 items-center">
+                            <span class="text-sm">Product Quality</span>
+                            <div class="flex items-center ml-2">
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-gray-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="ms-0 flex items-center ml-4">
+                            <span class="text-sm ms-0">Purchasing Experience</span>
+                            <div class="ms-0 flex items-center ml-2">
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-gray-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-gray-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <span class="font-bold">VietLot Company</span>
+                        <p class="mt-1">All kinds of grocery products are available in our store.</p>
+                    </div>
+                    <div class="flex items-center justify-between mt-4 text-sm text-gray-600 fill-current">
+                        <button class="flex items-center">
+                            <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path
+                                    d="M5.08 12.16A2.99 2.99 0 0 1 0 10a3 3 0 0 1 5.08-2.16l8.94-4.47a3 3 0 1 1 .9 1.79L5.98 9.63a3.03 3.03 0 0 1 0 .74l8.94 4.47A2.99 2.99 0 0 1 20 17a3 3 0 1 1-5.98-.37l-8.94-4.47z" />
+                            </svg>
+                            <span class="ml-2">Share</span>
+                        </button>
+                        <div class="flex items-center">
+                            <span>Was this review helplful?</span>
+                            <button class="flex items-center ml-6">
+                                <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path
+                                        d="M11 0h1v3l3 7v8a2 2 0 0 1-2 2H5c-1.1 0-2.31-.84-2.7-1.88L0 12v-2a2 2 0 0 1 2-2h7V2a2 2 0 0 1 2-2zm6 10h3v10h-3V10z" />
+                                </svg>
+                                <span class="ml-2">56</span>
+                            </button>
+                            <button class="flex items-center ml-4">
+                                <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path
+                                        d="M11 20a2 2 0 0 1-2-2v-6H2a2 2 0 0 1-2-2V8l2.3-6.12A3.11 3.11 0 0 1 5 0h8a2 2 0 0 1 2 2v8l-3 7v3h-1zm6-10V0h3v10h-3z" />
+                                </svg>
+                                <span class="ml-2">10</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CT 4 -->
+            <div class="flex items-start w-1/2 m-0">
+                <div class="flex-shrink-0 m-0">
+                    <div class="inline-block relative m-0">
+                        <div class="relative m-0 w-16 h-16 rounded-full overflow-hidden">
+                            <img class="m-0 absolute top-0 left-0 w-full h-full bg-cover object-fit object-cover"
+                                src="http://localhost/images/User2.PNG" alt="Profile picture">
+                            <div class=" m-0absolute top-0 left-0 w-full h-full rounded-full shadow-inner"></div>
+                        </div>
+                        <svg class="m-0 fill-current text-white bg-green-600 rounded-full p-1 absolute bottom-0 right-0 w-6 h-6 -mx-1 -my-1"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path
+                                d="M19 11a7.5 7.5 0 0 1-3.5 5.94L10 20l-5.5-3.06A7.5 7.5 0 0 1 1 11V3c3.38 0 6.5-1.12 9-3 2.5 1.89 5.62 3 9 3v8zm-9 1.08l2.92 2.04-1.03-3.41 2.84-2.15-3.56-.08L10 5.12 8.83 8.48l-3.56.08L8.1 10.7l-1.03 3.4L10 12.09z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="ml-6 m-0">
+                    <p class="m-0">
+                        <span class="text-gray-600 font-bold">Trị</span>
+                        <span class="ml-2 text-green-600 text-xs">Verified Buyer</span>
+                    </p>
+                    <div class="flex items-center justify-evenly gap-0 m-0">
+                        <svg class="w-4 h-4 m-0 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                        </svg>
+                        <svg class="w-4 h-4 m-0 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                        </svg>
+                        <svg class="w-4 h-4 m-0 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                        </svg>
+                        <svg class="w-4 h-4 m-0 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                        </svg>
+                        <svg class="w-4 h-4 ms-0 fill-current text-gray-400" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                        </svg>
+                    </div>
+                    <div class="flex items-center ms-0 mt-4 text-gray-600">
+                        <div class="flex ms-0 items-center">
+                            <span class="text-sm">Product Quality</span>
+                            <div class="flex items-center ml-2">
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-gray-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flex items-center ml-4">
+                            <span class="text-sm ms-0">Purchasing Experience</span>
+                            <div class="ms-0 flex items-center ml-2">
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-yellow-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-gray-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                                <svg class="w-3 h-3 fill-current text-gray-400" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <span class="font-bold">10101010 Company</span>
+                        <p class="mt-1">Our work can definitely support the local economy.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between mt-4 text-sm text-gray-600 fill-current">
+                        <button class="flex items-center">
+                            <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path
+                                    d="M5.08 12.16A2.99 2.99 0 0 1 0 10a3 3 0 0 1 5.08-2.16l8.94-4.47a3 3 0 1 1 .9 1.79L5.98 9.63a3.03 3.03 0 0 1 0 .74l8.94 4.47A2.99 2.99 0 0 1 20 17a3 3 0 1 1-5.98-.37l-8.94-4.47z" />
+                            </svg>
+                            <span class="ml-2">Share</span>
+                        </button>
+                        <div class="flex items-center">
+                            <span>Was this review helplful?</span>
+                            <button class="flex items-center ml-6">
+                                <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path
+                                        d="M11 0h1v3l3 7v8a2 2 0 0 1-2 2H5c-1.1 0-2.31-.84-2.7-1.88L0 12v-2a2 2 0 0 1 2-2h7V2a2 2 0 0 1 2-2zm6 10h3v10h-3V10z" />
+                                </svg>
+                                <span class="ml-2">56</span>
+                            </button>
+                            <button class="flex items-center ml-4">
+                                <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path
+                                        d="M11 20a2 2 0 0 1-2-2v-6H2a2 2 0 0 1-2-2V8l2.3-6.12A3.11 3.11 0 0 1 5 0h8a2 2 0 0 1 2 2v8l-3 7v3h-1zm6-10V0h3v10h-3z" />
+                                </svg>
+                                <span class="ml-2">10</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="content flex flex-row justify-between"> {{content}} </div> -->
+    <br>
+    <br>
+    <div class="w-2/3 flex items-center justify-center">
+        <hr class="w-full" style="border: 1px solid #c2c2c2;">
+    </div>
 
     </div>
+    <!-- Footer -->
+    <div class="Footer pt-12 mt-10 w-full bg-gray-100 h-screen">
+        <!-- input email -->
+        <div class="flex flex-row ">
+            <div class="ms-0 flex flex-col w-1/2 gap-4">
+                <div class="font-bold text-xl ms-12">Join our newsletter for £10 offs</div>
+                <div class="text-gray-600 w-1/2 text-sm ms-12">Register now to get latest updates on promotions &
+                    coupons.Don’t
+                    worry,
+                    we not
+                    spam!</div>
+            </div>
+            <div class="w-1/3 mt-4">
+                <div class="relative mb-6">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                        <svg class="z-20 w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+                            <path
+                                d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
+                            <path
+                                d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
+                        </svg>
+                    </div>
+                    <input type="text" id="input-group-1"
+                        class="bg-gray-50 border py-3.5 px-4.5 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Enter your email address">
+                    <button type="submit" style="background-color: #634c9f;"
+                        class="absolute z-20 top-0 end-0 p-2 px-5 h-full text-md font-medium text-white rounded-e-lg border focus:ring-4 focus:outline-color">
+                        SEND
+                    </button>
+
+                </div>
+                <div style="font-size: 12px;margin-top:-15px" class="text-gray-400">By subscribing you agree to our
+                    Terms &
+                    Conditions
+                    and Privacy &
+                    Cookies
+                    Policy.
+                </div>
+            </div>
+        </div>
+        <div class="w-2/3 flex items-center justify-center mt-10">
+            <hr class="w-full" style="border: 1px solid #c2c2c2;">
+        </div>
+        <!-- Need help -->
+        <div class="flex mt-10 flex-row justify-between w-full">
+            <div class="ms-0 flex flex-col gap-4 w-1/4">
+                <div class="font-medium text-md ms-12">Do You Need Help ?</div>
+                <div class="text-gray-600 w-1/2 text-sm ms-12">Autoseligen syr. Nek diarask fröbomba. Nör antipol kynoda
+                    nynat. Pressa fåmoska.</div>
+                <div href="#"
+                    class="ms-7 flex flex-col p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <div style="color:gray" class="flex ms-3 whitespace-nowrap">CONTACT DETAILS</div>
+                    <div class="flex flex-col"
+                        style="width:100%;list-style: none;margin-left: 10px;margin-top:15px;max-width: 98%;">
+                        <div class="flex flex-row m-0">
+                            <i style="font-size: 130%;" class="m-0 mt-1 fa-solid fa-phone"></i>
+                            <ul class="w-full m-0 ms-2">
+                                <li class="text-lg">555-555-5555</li>
+                                <li style="color:gray" class="text-sm">You can call anytime from 9 am to 6
+                                    pm.</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-row m-0 mt-5">
+                            <i style="font-size: 130%;" class="m-0 mt-1 fa-solid fa-paper-plane"></i>
+                            <ul class="text-lg w-full m-0 ms-2">
+                                <li>example@example.com</li>
+                                <li style="color:gray" class="text-sm">We will glady assist you in the short
+                                    time.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4">
+                <div class="font-medium text-md ">Make Money with Us</div>
+                <ul class="text-gray-600 text-sm mt-4">
+                    <li><a href="#">Sell on Grogin</a></li>
+                    <li><a href="#">Sell Your Services on Grogin</a></li>
+                    <li><a href="#">Sell on Grogin Business</a></li>
+                    <li><a href="#">Sell Your Apps on Grogin</a></li>
+                    <li><a href="#">Become an Affilate</a></li>
+                    <li><a href="#">Advertise Your Products</a></li>
+                    <li><a href="#">Sell-Publish with Us</a></li>
+                    <li><a href="#">Become an Blowwe Vendor</a></li>
+                </ul>
+            </div>
+
+            <div class="mt-4">
+                <div class="font-medium text-md ">Let Us Help You</div>
+                <ul class="text-gray-600 text-sm mt-4">
+                    <li><a href="#">Accessibility Statement</a></li>
+                    <li><a href="#">Your Orders</a></li>
+                    <li><a href="#">Returns & Replacements</a></li>
+                    <li><a href="#">Shipping Rates & Policies</a></li>
+                    <li><a href="#">Refund and Returns Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Cookie Settings</a></li>
+                    <li><a href="#">Help Center</a></li>
+                </ul>
+            </div>
+            <div class="mt-4">
+                <div class="font-medium text-md ">Get to Know Us</div>
+                <ul class="text-gray-600 text-sm mt-4">
+                    <li><a href="#">Careers for Grogin</a></li>
+                    <li><a href="#">About Grogin</a></li>
+                    <li><a href="#">Inverstor Relations</a></li>
+                    <li><a href="#">Grogin Devices</a></li>
+                    <li><a href="#">Customer reviews</a></li>
+                    <li><a href="#">Social Responsibility</a></li>
+                    <li><a href="#">Store Locations</a></li>
+                </ul>
+            </div>
+            <div class="mt-4 w-1/6">
+                <div class="font-medium text-md ms-0">Download our app</div>
+                <table class="mt-5">
+                    <tr>
+                        <td><a href="#"></a><img class="ms-0" style="width:50%;height:50%"
+                                src="http://localhost/images/dowloadApp1.webp" alt="...">
+                            <span class="text-sm text-gray-400">Download App Get -10% Discount</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a class="ms-0" href="#"><img class="ms-0 ml-0" style="width:50%;height:50%"
+                                    src="http://localhost/images/dowloadApp.webp" alt="..."> <span
+                                    class="text-sm text-gray-400">Download App Get -20% Discount</span></a></td>
+
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+        <div class="w-2/3 flex items-center justify-center mt-10">
+            <hr class="w-full" style="border: 1px solid #c2c2c2;">
+        </div>
+        <div class="w-2/3 mt-10">
+            <div class="flex flex-row justify-center gap-0">
+                <div style="color:gray" class="text-sm ms-12 w-1/2"> Copyright 2024 © Grogin WooCommerce WordPress
+                    Theme. All
+                    right
+                    reserved. Powered by KLBTheme.</div>
+
+                <ul class="flex flex-row text-sm w-1/2">
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Order Tracking</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="w-full mt-3">
+            <img src="http://localhost/images/lastimg.PNG" alt="...">
+        </div>
+    </div>
+    </div>
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
