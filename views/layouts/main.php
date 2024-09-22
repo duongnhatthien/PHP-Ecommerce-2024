@@ -271,7 +271,7 @@
                         class="relative hidden lg:inline-flex items-center ps-4 ml-1 text-sm font-medium text-center rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300">
                         <a href="/#"><i class="fa-regular fa-heart" style="font-size: 160%;"></i></a>
                         <div
-                            class="transition duration-1000 ease-in-out animate-ping absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900">
+                            class="transition duration-1000 animate-bounce absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-3 -end-3 dark:border-gray-900">
                             18</div>
                     </button>
 
@@ -280,7 +280,7 @@
                         <a href=" /#"><i class="fa-solid fa-cart-shopping" class="ms-0"
                                 style="font-size: 160%;"></i></a>
                         <div
-                            class="transition duration-1000 ease-in-out animate-ping absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900">
+                            class="transition duration-1000 ease-in-out animate-ping absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-3 -end-3 dark:border-gray-900">
                             10</div>
                     </div>
                 </div>
@@ -969,275 +969,9 @@
                                 </div>
                             </div>
 
-                            <div
-                                class="z-20 w-full flex flex-row items-center h-screen mt-[-40px] sm:mt-[-40px] md:mt-[-40px] lg:mt-[-60px]">
-                                <div class="flex flex-row items-center justify-between py-2 text-sm text-gray-700 dark:text-gray-200"
+                            <div class="z-20 w-full flex flex-row items-center h-screen">
+                                <div class="flex flex-row items-center pt-0 mt-0 overflow-x-scroll justify-between py-2 text-sm text-gray-700 dark:text-gray-200"
                                     aria-labelledby="dropdownHoverButton4">
-                                    <div
-                                        class="relative item flex w-1/3 max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
-                                        <a class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
-                                            <div class="carousel-container">
-                                                <div class="carousel">
-                                                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-                                                        alt="Image 1" class="carousel-image" id="img1" />
-                                                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-                                                        alt="Image 2" class="carousel-image" id="img2" />
-                                                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-                                                        alt="Image 3" class="carousel-image" id="img3" />
-                                                </div>
-                                            </div>
-                                            <span style="background-color: red"
-                                                class="absolute top-0 left-0 m-2 rounded-r-full px-2 py-1 text-center text-sm font-medium text-white">39%
-                                                OFF</span>
-                                            <span
-                                                class="absolute top-0 right-0 m-2 bg-gray-100 rounded-full px-2 text-center text-sm font-medium text-white"><i
-                                                    class="fa-regular text-3xl fa-heart text-black"></i></span>
-
-                                            <span
-                                                class="absolute appear top-10 bg-gray-100 right-0 appear m-2 rounded-full px-2 text-center text-sm font-medium text-white"><i
-                                                    class="fa-regular text-3xl fa-eye text-black"></i></span>
-                                            <span
-                                                class="absolute appearquick bg-gray-100 top-20 right-0 m-2 rounded-full px-2.5 text-center text-sm font-medium text-white">
-                                                <i class="fa-solid text-3xl fa-repeat text-black"></i></span>
-                                        </a>
-
-                                        <div class="mt-4 px-5 pb-5">
-                                            <div class="w-fit rounded-3xl absolute right-6 top-[62%]"
-                                                style="background-color: purple">
-                                                <i class="p-3 fa-solid fa-plus text-white"></i>
-                                            </div>
-                                            <a href="#">
-                                                <h5 class="text-md tracking-tight text-slate-900">
-                                                    Nike Air MX Super 2500 - Red super saiyan blue style
-                                                </h5>
-                                            </a>
-                                            <div class="mt-2 mb-1 flex items-center ms-0 justify-between">
-                                                <div class="flex items-center ms-0">
-                                                    <svg aria-hidden="true" class="h-4 w-4 text-yellow-300"
-                                                        fill="currentColor" viewBox="0 0 20 20"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                                        </path>
-                                                    </svg>
-                                                    <svg aria-hidden="true" class="h-4 w-4 text-yellow-300"
-                                                        fill="currentColor" viewBox="0 0 20 20"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                                        </path>
-                                                    </svg>
-                                                    <svg aria-hidden="true" class="h-4 w-4 text-yellow-300"
-                                                        fill="currentColor" viewBox="0 0 20 20"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                                        </path>
-                                                    </svg>
-                                                    <svg aria-hidden="true" class="h-4 w-4 text-yellow-300"
-                                                        fill="currentColor" viewBox="0 0 20 20"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                                        </path>
-                                                    </svg>
-                                                    <svg aria-hidden="true" class="h-4 w-4 text-yellow-300"
-                                                        fill="currentColor" viewBox="0 0 20 20"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                                        </path>
-                                                    </svg>
-                                                    <span
-                                                        class="mr-2 pb-2 rounded px-2.5 py-0.5 text-xs font-semibold">5.0</span>
-                                                </div>
-                                            </div>
-                                            <p>
-                                                <span class="text-3xl font-bold text-slate-900"
-                                                    style="color: red">$449</span>
-                                                <span
-                                                    class="text-md text-slate-900 line-through decoration-red-500">$699</span>
-                                            </p>
-                                            <!-- <a
-          href="#"
-          style="
-            color: purple;
-            border: 1px solid purple;
-            border-radius: 60px;
-          "
-          class="flex mt-2 items-center border-2 justify-between rounded-md px-4 py-1 text-center text-sm font-medium text-white hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-blue-300"
-          ><div class="flex flex-row items-center text-md justify-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="mr-2 h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-              />
-            </svg>
-            Add to cart
-          </div>
-          <i class="fa-solid fa-plus"></i
-        ></a> -->
-                                            <hr class="mt-2 mb-3" />
-                                            <div class="" style="color: gray">
-                                                This product is about to run out
-                                            </div>
-
-                                            <div
-                                                class="w-full mt-3 bg-gray-200 rounded-full h-2.5 mb-3 dark:bg-gray-700">
-                                                <div class="h-2.5 ms-0 rounded-full" style="
-                width: 70%;
-                background-image: linear-gradient(
-                  to right,
-                  yellow,
-                  orange,
-                  red
-                );
-              "></div>
-                                            </div>
-                                            <div class="" style="color: gray">Available only:28</div>
-                                        </div>
-                                    </div>
-                                    <!-- Card 2 -->
-                                    <div
-                                        class="relative item flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
-                                        <a class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
-                                            <div class="carousel-container">
-                                                <div class="carousel">
-                                                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-                                                        alt="Image 1" class="carousel-image" id="img1" />
-                                                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-                                                        alt="Image 2" class="carousel-image" id="img2" />
-                                                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-                                                        alt="Image 3" class="carousel-image" id="img3" />
-                                                </div>
-                                            </div>
-                                            <span style="background-color: red"
-                                                class="absolute top-0 left-0 m-2 rounded-r-full px-2 py-1 text-center text-sm font-medium text-white">39%
-                                                OFF</span>
-                                            <span
-                                                class="absolute top-0 right-0 m-2 bg-gray-100 rounded-full px-2 text-center text-sm font-medium text-white"><i
-                                                    class="fa-regular text-3xl fa-heart text-black"></i></span>
-
-                                            <span
-                                                class="absolute appear top-10 bg-gray-100 right-0 appear m-2 rounded-full px-2 text-center text-sm font-medium text-white"><i
-                                                    class="fa-regular text-3xl fa-eye text-black"></i></span>
-                                            <span
-                                                class="absolute appearquick bg-gray-100 top-20 right-0 m-2 rounded-full px-2.5 text-center text-sm font-medium text-white">
-                                                <i class="fa-solid text-3xl fa-repeat text-black"></i></span>
-                                        </a>
-
-                                        <div class="mt-4 px-5 pb-5">
-                                            <div class="w-fit rounded-3xl absolute right-6 top-[62%]"
-                                                style="background-color: purple">
-                                                <i class="p-3 fa-solid fa-plus text-white"></i>
-                                            </div>
-                                            <a href="#">
-                                                <h5 class="text-md tracking-tight text-slate-900">
-                                                    Nike Air MX Super 2500 - Red super saiyan blue style
-                                                </h5>
-                                            </a>
-                                            <div class="mt-2 mb-1 flex items-center ms-0 justify-between">
-                                                <div class="flex items-center ms-0">
-                                                    <svg aria-hidden="true" class="h-4 w-4 text-yellow-300"
-                                                        fill="currentColor" viewBox="0 0 20 20"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                                        </path>
-                                                    </svg>
-                                                    <svg aria-hidden="true" class="h-4 w-4 text-yellow-300"
-                                                        fill="currentColor" viewBox="0 0 20 20"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                                        </path>
-                                                    </svg>
-                                                    <svg aria-hidden="true" class="h-4 w-4 text-yellow-300"
-                                                        fill="currentColor" viewBox="0 0 20 20"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                                        </path>
-                                                    </svg>
-                                                    <svg aria-hidden="true" class="h-4 w-4 text-yellow-300"
-                                                        fill="currentColor" viewBox="0 0 20 20"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                                        </path>
-                                                    </svg>
-                                                    <svg aria-hidden="true" class="h-4 w-4 text-yellow-300"
-                                                        fill="currentColor" viewBox="0 0 20 20"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                                        </path>
-                                                    </svg>
-                                                    <span
-                                                        class="mr-2 pb-2 rounded px-2.5 py-0.5 text-xs font-semibold">5.0</span>
-                                                </div>
-                                            </div>
-                                            <p>
-                                                <span class="text-3xl font-bold text-slate-900"
-                                                    style="color: red">$449</span>
-                                                <span
-                                                    class="text-md text-slate-900 line-through decoration-red-500">$699</span>
-                                            </p>
-                                            <!-- <a
-          href="#"
-          style="
-            color: purple;
-            border: 1px solid purple;
-            border-radius: 60px;
-          "
-          class="flex mt-2 items-center border-2 justify-between rounded-md px-4 py-1 text-center text-sm font-medium text-white hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-blue-300"
-          ><div class="flex flex-row items-center text-md justify-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="mr-2 h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-              />
-            </svg>
-            Add to cart
-          </div>
-          <i class="fa-solid fa-plus"></i
-        ></a> -->
-                                            <hr class="mt-2 mb-3" />
-                                            <div class="" style="color: gray">
-                                                This product is about to run out
-                                            </div>
-
-                                            <div
-                                                class="w-full mt-3 bg-gray-200 rounded-full h-2.5 mb-3 dark:bg-gray-700">
-                                                <div class="h-2.5 ms-0 rounded-full" style="
-                width: 70%;
-                background-image: linear-gradient(
-                  to right,
-                  yellow,
-                  orange,
-                  red
-                );
-              "></div>
-                                            </div>
-                                            <div class="" style="color: gray">Available only:28</div>
-                                        </div>
-                                    </div>
                                     <!-- Card 3 -->
                                     <div
                                         class="relative item flex w-full max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
@@ -3798,6 +3532,471 @@
                 All
                 -></span>
         </div>
+        <div class="flex flex-row items-center justify-evenly mt-3">
+            <div
+                class="relative item flex w-1/4 max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
+                <a class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
+                    <div class="carousel-container">
+                        <div class="carousel items-center">
+                            <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                                alt="Image 1" class="carousel-image" id="img1" />
+                            <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                                alt="Image 2" class="carousel-image" id="img2" />
+                            <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                                alt="Image 3" class="carousel-image" id="img3" />
+                        </div>
+                    </div>
+                    <span style="background-color: red"
+                        class="absolute top-0 left-0 m-2 rounded-r-full px-2 py-1 text-center text-sm font-medium text-white">39%
+                        OFF</span>
+                    <span
+                        class="absolute top-0 right-0 m-2 bg-gray-100 rounded-full px-2 text-center text-sm font-medium text-white"><i
+                            class="fa-regular text-3xl fa-heart text-black"></i></span>
+
+                    <span
+                        class="absolute appear top-10 bg-gray-100 right-0 appear m-2 rounded-full px-2 text-center text-sm font-medium text-white"><i
+                            class="fa-regular text-3xl fa-eye text-black"></i></span>
+                    <span
+                        class="absolute appearquick bg-gray-100 top-20 right-0 m-2 rounded-full px-2.5 text-center text-sm font-medium text-white">
+                        <i class="fa-solid text-3xl fa-repeat text-black"></i></span>
+                </a>
+                <div class="flex flex-col ps-3 mt-0 pt-0 ms-0">
+                    <div class="rounded-r-3xl w-fit" style="
+                background-image: linear-gradient(
+                  to right,
+                  greenyellow,
+                  aquamarine
+                );
+              ">
+                        <i style="color: green" class="fa-solid fa-leaf text-sm p-2"><span
+                                class="ml-1 not-italic">organic</span></i>
+                    </div>
+
+                </div>
+                <div class="mt-1 px-3 pb-5 ms-0">
+                    <div class="w-fit rounded-3xl absolute right-6 top-[62%]" style="background-color: purple">
+                        <i class="p-3 fa-solid fa-plus text-white"></i>
+                    </div>
+                    <a href="#">
+                        <h5 class="text-md tracking-tight text-slate-900">
+                            Nike Air MX Super 2500 - Red
+                        </h5>
+                    </a>
+                    <div class="mt-2 ms-0 mb-1 flex items-center justify-between">
+                        <div class="flex ms-0">
+                            <svg aria-hidden="true" class="h-4 w-4 text-yellow-300" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg aria-hidden="true" class="h-4 w-4 text-yellow-300" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg aria-hidden="true" class="h-4 w-4 text-yellow-300" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg aria-hidden="true" class="h-4 w-4 text-yellow-300" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg aria-hidden="true" class="h-4 w-4 text-yellow-300" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <span class="mr-2 pb-2 rounded px-2.5 py-0.5 text-xs font-semibold">5.0</span>
+                        </div>
+                    </div>
+                    <p>
+                        <span class="text-3xl font-bold text-slate-900" style="color: red">$449</span>
+                        <span class="text-md text-slate-900 line-through decoration-red-500">$699</span>
+                    </p>
+                    <a href="#" style="color: purple; border: 1px solid purple; border-radius: 60px"
+                        class="flex mt-2 items-center border-2 justify-between rounded-md px-4 py-1 text-center text-sm font-medium text-white hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                        <div class="flex flex-row items-center text-md justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            Add to cart
+                        </div>
+                        <i class="fa-solid fa-plus"></i>
+                    </a>
+                    <!-- <hr class="mt-2 mb-3" />
+        <div class="" style="color:gray">This product is about to run out</div>
+      
+  <div class="w-full mt-3 bg-gray-200 rounded-full h-2.5 mb-3 dark:bg-gray-700">
+  <div class="h-2.5 rounded-full" style="width: 70%;background-image: linear-gradient(to right,yellow,orange,red);"></div>
+  </div>
+        <div class="" style="color:gray">Available only:28</div> -->
+                </div>
+            </div>
+            <div
+                class="relative items-center flex w-1/4 rounded-lg border border-gray-100 bg-white shadow-md overflow-hidden">
+                <img src="http://localhost/images/imgatBestSeller1.PNG" class="w-full h-full object-cover rounded-lg"
+                    alt="...">
+            </div>
+            <div
+                class="relative items-center flex w-1/4 rounded-lg border border-gray-100 bg-white shadow-md overflow-hidden">
+                <img src="http://localhost/images/imgatBestSeller2.PNG" class="w-full h-full object-cover rounded-lg"
+                    alt="...">
+            </div>
+            <div
+                class="relative item flex w-1/4 max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
+                <a class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
+                    <div class="carousel-container">
+                        <div class="carousel items-center">
+                            <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                                alt="Image 1" class="carousel-image" id="img1" />
+                            <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                                alt="Image 2" class="carousel-image" id="img2" />
+                            <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                                alt="Image 3" class="carousel-image" id="img3" />
+                        </div>
+                    </div>
+                    <span style="background-color: red"
+                        class="absolute top-0 left-0 m-2 rounded-r-full px-2 py-1 text-center text-sm font-medium text-white">39%
+                        OFF</span>
+                    <span
+                        class="absolute top-0 right-0 m-2 bg-gray-100 rounded-full px-2 text-center text-sm font-medium text-white"><i
+                            class="fa-regular text-3xl fa-heart text-black"></i></span>
+
+                    <span
+                        class="absolute appear top-10 bg-gray-100 right-0 appear m-2 rounded-full px-2 text-center text-sm font-medium text-white"><i
+                            class="fa-regular text-3xl fa-eye text-black"></i></span>
+                    <span
+                        class="absolute appearquick bg-gray-100 top-20 right-0 m-2 rounded-full px-2.5 text-center text-sm font-medium text-white">
+                        <i class="fa-solid text-3xl fa-repeat text-black"></i></span>
+                </a>
+                <div class="flex flex-col ps-3 mt-0 pt-0 ms-0">
+                    <div class="rounded-r-3xl w-fit" style="
+                background-image: linear-gradient(
+                  to right,
+                  greenyellow,
+                  aquamarine
+                );
+              ">
+                        <i style="color: green" class="fa-solid fa-leaf text-sm p-2"><span
+                                class="ml-1 not-italic">organic</span></i>
+                    </div>
+
+                </div>
+                <div class="mt-1 px-3 pb-5 ms-0">
+                    <div class="w-fit rounded-3xl absolute right-6 top-[62%]" style="background-color: purple">
+                        <i class="p-3 fa-solid fa-plus text-white"></i>
+                    </div>
+                    <a href="#">
+                        <h5 class="text-md tracking-tight text-slate-900">
+                            Nike Air MX Super 2500 - Red
+                        </h5>
+                    </a>
+                    <div class="mt-2 ms-0 mb-1 flex items-center justify-between">
+                        <div class="flex ms-0">
+                            <svg aria-hidden="true" class="h-4 w-4 text-yellow-300" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg aria-hidden="true" class="h-4 w-4 text-yellow-300" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg aria-hidden="true" class="h-4 w-4 text-yellow-300" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg aria-hidden="true" class="h-4 w-4 text-yellow-300" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg aria-hidden="true" class="h-4 w-4 text-yellow-300" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <span class="mr-2 pb-2 rounded px-2.5 py-0.5 text-xs font-semibold">5.0</span>
+                        </div>
+                    </div>
+                    <p>
+                        <span class="text-3xl font-bold text-slate-900" style="color: red">$449</span>
+                        <span class="text-md text-slate-900 line-through decoration-red-500">$699</span>
+                    </p>
+                    <a href="#" style="color: purple; border: 1px solid purple; border-radius: 60px"
+                        class="flex mt-2 items-center border-2 justify-between rounded-md px-4 py-1 text-center text-sm font-medium text-white hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                        <div class="flex flex-row items-center text-md justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            Add to cart
+                        </div>
+                        <i class="fa-solid fa-plus"></i>
+                    </a>
+                    <!-- <hr class="mt-2 mb-3" />
+        <div class="" style="color:gray">This product is about to run out</div>
+      
+  <div class="w-full mt-3 bg-gray-200 rounded-full h-2.5 mb-3 dark:bg-gray-700">
+  <div class="h-2.5 rounded-full" style="width: 70%;background-image: linear-gradient(to right,yellow,orange,red);"></div>
+  </div>
+        <div class="" style="color:gray">Available only:28</div> -->
+                </div>
+            </div>
+
+        </div>
+        <!-- after Best Seller 2 -->
+        <div class="flex flex-row items-center justify-evenly mt-3">
+            <div
+                class="relative items-center flex w-1/4 rounded-lg border border-gray-100 bg-white shadow-md overflow-hidden">
+                <img src="http://localhost/images/imgatBestSeller1.PNG" class="w-full h-full object-cover rounded-lg"
+                    alt="...">
+            </div>
+
+            <div
+                class="relative item flex w-1/4 max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
+                <a class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
+                    <div class="carousel-container">
+                        <div class="carousel items-center">
+                            <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                                alt="Image 1" class="carousel-image" id="img1" />
+                            <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                                alt="Image 2" class="carousel-image" id="img2" />
+                            <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                                alt="Image 3" class="carousel-image" id="img3" />
+                        </div>
+                    </div>
+                    <span style="background-color: red"
+                        class="absolute top-0 left-0 m-2 rounded-r-full px-2 py-1 text-center text-sm font-medium text-white">39%
+                        OFF</span>
+                    <span
+                        class="absolute top-0 right-0 m-2 bg-gray-100 rounded-full px-2 text-center text-sm font-medium text-white"><i
+                            class="fa-regular text-3xl fa-heart text-black"></i></span>
+
+                    <span
+                        class="absolute appear top-10 bg-gray-100 right-0 appear m-2 rounded-full px-2 text-center text-sm font-medium text-white"><i
+                            class="fa-regular text-3xl fa-eye text-black"></i></span>
+                    <span
+                        class="absolute appearquick bg-gray-100 top-20 right-0 m-2 rounded-full px-2.5 text-center text-sm font-medium text-white">
+                        <i class="fa-solid text-3xl fa-repeat text-black"></i></span>
+                </a>
+                <div class="flex flex-col ps-3 mt-0 pt-0 ms-0">
+                    <div class="rounded-r-3xl w-fit" style="
+                background-image: linear-gradient(
+                  to right,
+                  greenyellow,
+                  aquamarine
+                );
+              ">
+                        <i style="color: green" class="fa-solid fa-leaf text-sm p-2"><span
+                                class="ml-1 not-italic">organic</span></i>
+                    </div>
+
+                </div>
+                <div class="mt-1 px-3 pb-5 ms-0">
+                    <div class="w-fit rounded-3xl absolute right-6 top-[62%]" style="background-color: purple">
+                        <i class="p-3 fa-solid fa-plus text-white"></i>
+                    </div>
+                    <a href="#">
+                        <h5 class="text-md tracking-tight text-slate-900">
+                            Nike Air MX Super 2500 - Red
+                        </h5>
+                    </a>
+                    <div class="mt-2 ms-0 mb-1 flex items-center justify-between">
+                        <div class="flex ms-0">
+                            <svg aria-hidden="true" class="h-4 w-4 text-yellow-300" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg aria-hidden="true" class="h-4 w-4 text-yellow-300" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg aria-hidden="true" class="h-4 w-4 text-yellow-300" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg aria-hidden="true" class="h-4 w-4 text-yellow-300" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg aria-hidden="true" class="h-4 w-4 text-yellow-300" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <span class="mr-2 pb-2 rounded px-2.5 py-0.5 text-xs font-semibold">5.0</span>
+                        </div>
+                    </div>
+                    <p>
+                        <span class="text-3xl font-bold text-slate-900" style="color: red">$449</span>
+                        <span class="text-md text-slate-900 line-through decoration-red-500">$699</span>
+                    </p>
+                    <a href="#" style="color: purple; border: 1px solid purple; border-radius: 60px"
+                        class="flex mt-2 items-center border-2 justify-between rounded-md px-4 py-1 text-center text-sm font-medium text-white hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                        <div class="flex flex-row items-center text-md justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            Add to cart
+                        </div>
+                        <i class="fa-solid fa-plus"></i>
+                    </a>
+                    <!-- <hr class="mt-2 mb-3" />
+        <div class="" style="color:gray">This product is about to run out</div>
+      
+  <div class="w-full mt-3 bg-gray-200 rounded-full h-2.5 mb-3 dark:bg-gray-700">
+  <div class="h-2.5 rounded-full" style="width: 70%;background-image: linear-gradient(to right,yellow,orange,red);"></div>
+  </div>
+        <div class="" style="color:gray">Available only:28</div> -->
+                </div>
+            </div>
+
+            <div
+                class="relative item flex w-1/4 max-w-xs flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md">
+                <a class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl" href="#">
+                    <div class="carousel-container">
+                        <div class="carousel items-center">
+                            <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                                alt="Image 1" class="carousel-image" id="img1" />
+                            <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                                alt="Image 2" class="carousel-image" id="img2" />
+                            <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                                alt="Image 3" class="carousel-image" id="img3" />
+                        </div>
+                    </div>
+                    <span style="background-color: red"
+                        class="absolute top-0 left-0 m-2 rounded-r-full px-2 py-1 text-center text-sm font-medium text-white">39%
+                        OFF</span>
+                    <span
+                        class="absolute top-0 right-0 m-2 bg-gray-100 rounded-full px-2 text-center text-sm font-medium text-white"><i
+                            class="fa-regular text-3xl fa-heart text-black"></i></span>
+
+                    <span
+                        class="absolute appear top-10 bg-gray-100 right-0 appear m-2 rounded-full px-2 text-center text-sm font-medium text-white"><i
+                            class="fa-regular text-3xl fa-eye text-black"></i></span>
+                    <span
+                        class="absolute appearquick bg-gray-100 top-20 right-0 m-2 rounded-full px-2.5 text-center text-sm font-medium text-white">
+                        <i class="fa-solid text-3xl fa-repeat text-black"></i></span>
+                </a>
+                <div class="flex flex-col ps-3 mt-0 pt-0 ms-0">
+                    <div class="rounded-r-3xl w-fit" style="
+                background-image: linear-gradient(
+                  to right,
+                  greenyellow,
+                  aquamarine
+                );
+              ">
+                        <i style="color: green" class="fa-solid fa-leaf text-sm p-2"><span
+                                class="ml-1 not-italic">organic</span></i>
+                    </div>
+
+                </div>
+                <div class="mt-1 px-3 pb-5 ms-0">
+                    <div class="w-fit rounded-3xl absolute right-6 top-[62%]" style="background-color: purple">
+                        <i class="p-3 fa-solid fa-plus text-white"></i>
+                    </div>
+                    <a href="#">
+                        <h5 class="text-md tracking-tight text-slate-900">
+                            Nike Air MX Super 2500 - Red
+                        </h5>
+                    </a>
+                    <div class="mt-2 ms-0 mb-1 flex items-center justify-between">
+                        <div class="flex ms-0">
+                            <svg aria-hidden="true" class="h-4 w-4 text-yellow-300" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg aria-hidden="true" class="h-4 w-4 text-yellow-300" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg aria-hidden="true" class="h-4 w-4 text-yellow-300" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg aria-hidden="true" class="h-4 w-4 text-yellow-300" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg aria-hidden="true" class="h-4 w-4 text-yellow-300" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <span class="mr-2 pb-2 rounded px-2.5 py-0.5 text-xs font-semibold">5.0</span>
+                        </div>
+                    </div>
+                    <p>
+                        <span class="text-3xl font-bold text-slate-900" style="color: red">$449</span>
+                        <span class="text-md text-slate-900 line-through decoration-red-500">$699</span>
+                    </p>
+                    <a href="#" style="color: purple; border: 1px solid purple; border-radius: 60px"
+                        class="flex mt-2 items-center border-2 justify-between rounded-md px-4 py-1 text-center text-sm font-medium text-white hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                        <div class="flex flex-row items-center text-md justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                            Add to cart
+                        </div>
+                        <i class="fa-solid fa-plus"></i>
+                    </a>
+                    <!-- <hr class="mt-2 mb-3" />
+        <div class="" style="color:gray">This product is about to run out</div>
+      
+  <div class="w-full mt-3 bg-gray-200 rounded-full h-2.5 mb-3 dark:bg-gray-700">
+  <div class="h-2.5 rounded-full" style="width: 70%;background-image: linear-gradient(to right,yellow,orange,red);"></div>
+  </div>
+        <div class="" style="color:gray">Available only:28</div> -->
+                </div>
+            </div>
+            <div
+                class="relative items-center flex w-1/4 rounded-lg border border-gray-100 bg-white shadow-md overflow-hidden">
+                <img src="http://localhost/images/imgatBestSeller2.PNG" class="w-full h-full object-cover rounded-lg"
+                    alt="...">
+            </div>
+        </div>
+        <br>
         <div class="w-full ms-0"><img class="w-full" src="http://localhost/images/adsfooter.PNG"
                 style="border-radius: 10px;" alt="...">
         </div>
