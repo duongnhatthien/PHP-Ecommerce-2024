@@ -1,0 +1,106 @@
+.appear {
+  transform: translateX(30px);
+}
+.item:hover .appear {
+  animation: appear1 0.3s linear forwards;
+}
+.item .appear {
+  animation: appear2 0.3s linear forwards;
+}
+@keyframes appear1 {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes appear2 {
+  from {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+}
+.appearquick {
+  transform: translateX(30px);
+}
+.item:hover .appearquick {
+  animation: appearquick1 0s linear forwards;
+}
+.item .appearquick {
+  animation: appearquick2 0s linear forwards;
+}
+@keyframes appearquick1 {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes appearquick2 {
+  from {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+}
+
+.carousel-container {
+  width: 300px;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.3s ease-out;
+  cursor: grab;
+  height: 100%;
+}
+
+.carousel:active {
+  cursor: grabbing;
+}
+
+.carousel-image {
+  width: 100%;
+}
+
+.carouselTong-container {
+  position: relative;
+  width: 96%;
+  overflow: hidden;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
