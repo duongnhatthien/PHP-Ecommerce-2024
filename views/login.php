@@ -16,7 +16,7 @@
     }
 
     .divTong {
-        width: 95%;
+        width: 100%;
         height: fit-content;
     }
 
@@ -200,10 +200,10 @@
                 class="w-full flex flex-wrap justify-between h-16 lg:justify-evenly lg:items-center pt-3 lg:pt-4 lg:pb-4">
                 <div class="flex ml-0 lg:hidden text-center">
                     <button
-                        class="text-black focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5"
+                        class="bg-white hover:bg-gray-300 text-black focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5"
                         type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation"
                         aria-controls="drawer-navigation">
-                        <i style="font-size: 160%;" class="fa-solid fa-bars"></i>
+                        <i id="showNav" style="font-size: 160%;" class="fa-solid fa-bars"></i>
                     </button>
                 </div>
                 <div class="ms-2 sm:w-1/3 md:w-1/3 lg:w-1/6">
@@ -211,7 +211,8 @@
                         src="https://klbtheme.com/grogin/wp-content/uploads/2023/11/grogin-logo-dark.png" alt="Logo">
                 </div>
                 <div class="relative lg:hidden inline-flex items-center p-1.5 ml-1 m-0 text-sm font-medium ">
-                    <a href=" /#"><i class="fa-solid fa-cart-shopping" class="ms-0" style="font-size: 160%;"></i></a>
+                    <a href=" /#"><i class="fa-solid fa-cart-shopping text-gray-600" class="ms-0"
+                            style="font-size: 160%;"></i></a>
                     <div
                         class="animate-ping absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-0 -end-1 dark:border-gray-900">
                         0</div>
@@ -274,7 +275,7 @@
                         class="relative hidden lg:inline-flex items-center p-0 ps-4 ml-1 text-sm font-medium text-center rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300">
                         <a href="/#"><i class="fa-regular fa-heart text-black" style="font-size: 160%;"></i></a>
                         <div
-                            class="transition duration-1000 animate-bounce absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2.5 -end-2.5 dark:border-gray-900">
+                            class="transition duration-1000 animate-bounce absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-3 -end-1 dark:border-gray-900">
                             14</div>
                     </button>
 
@@ -296,7 +297,7 @@
         -->
             <div class="flex w-full flex-col mt-4 ml-0 lg:ml-8">
                 <ul class="hidden w-full infor text-sm flex-row font-medium lg:flex items-center justify-between p-3">
-                    <li class="m-0">
+                    <li class="m-0 group relative">
                         <a href=" #" style="font-size: 16px;color:#634c9f"
                             class="block py-2 px-3 text-gray-900 rounded md:bg-transparent md:text-grey-700 md:p-0 dark:text-white md:dark:text-grey-500"
                             aria-current="page" id="dropdownHoverButton2" data-dropdown-toggle="dropdownHover2"
@@ -304,10 +305,9 @@
                             class="text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
                             type="button">Home<i style="color:#634c9f;margin-left:5px"
                                 class="fa-solid fa-chevron-down"></i>
-
                         </a>
                         <div id="dropdownHover2" style="width: 160px;"
-                            class="z-20 w-1/2 flex flex-col items-center justify-evenly z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                            class="w-1/2 flex group-hover:block flex-col items-center absolute hidden justify-evenly z-20 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                             <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
                                 aria-labelledby="dropdownHoverButton2">
                                 <li>
@@ -344,7 +344,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li class="group relative">
                         <a href="#" style="font-size: 16px;color:#634c9f"
                             class="block py-2 px-3 text-gray-900 rounded md:bg-transparent md:text-grey-700 md:p-0 dark:text-white md:dark:text-grey-500"
                             aria-current="page" data-dropdown-toggle="dropdownHover3" data-dropdown-trigger="hover"
@@ -352,8 +352,8 @@
                             type="button">Shop <i style="color:#634c9f" class="fa-solid fa-chevron-down"></i>
 
                         </a>
-                        <div id="dropdownHover3" style="width:100%;max-width:100%;"
-                            class="z-20 flex flex-row ml-10 items-center h-1/2 justify-between z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                        <div id="dropdownHover3"
+                            class="absolute hidden group-hover:flex h-[1700%] top-full w-[2850%] -left-[500%] flex flex-row ml-10 items-center justify-between z-10 bg-white rounded-lg">
                             <ul
                                 class="w-full flex flex-col items-center justify-evenly text-sm text-gray-700 dark:text-gray-200">
                                 <li>
@@ -607,7 +607,7 @@
                         <a style="font-size: 16px;color:#634c9f" href="#">Contact
                         </a>
                     </li>
-                    <li>
+                    <li class="relative group">
                         <a href="#" style="font-size: 16px;color:#634c9f"
                             class="block py-2 px-3 text-gray-900 rounded md:bg-transparent md:text-grey-700 md:p-0 dark:text-white md:dark:text-grey-500"
                             aria-current="page" id="dropdownHoverButton4" data-dropdown-toggle="dropdownHover4"
@@ -618,7 +618,7 @@
 
                         </a>
                         <div id="dropdownHover4"
-                            class=" z-20 w-full flex flex-col items-center h-screen overflow-hidden justify-evenly hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                            class="z-20 absolute group-hover:flex h-[1700%] top-[150%] w-[800%] -left-[550%]  flex-col items-center h-screen overflow-hidden justify-evenly hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                             <div style="background-image: linear-gradient(to right,yellow,red);"
                                 class="rounded-full w-full ms-3.5 m-0 mb-2 p-1 flex items-center justify-between flex-row">
                                 <div class="ms-0" style="width: 93%;">
@@ -629,7 +629,7 @@
                                 </div>
                             </div>
 
-                            <div class="z-20 w-full flex flex-row items-center h-screen">
+                            <div class="w-full flex flex-row items-center h-screen">
                                 <div class="flex flex-row items-center pt-0 mt-0 overflow-x-scroll justify-between py-2 text-sm text-gray-700 dark:text-gray-200"
                                     aria-labelledby="dropdownHoverButton4">
                                     <!-- Card 3 -->
@@ -1168,7 +1168,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="m-0">
+                    <li class="m-0 relative group">
                         <a href="#" style=" font-size: 16px;color:orangered"
                             class="block py-2 px-3 text-gray-900 rounded md:bg-transparent md:text-grey-700 md:p-0 dark:text-white md:dark:text-grey-500"
                             aria-current="page" id="dropdownHoverButton7" data-dropdown-toggle="dropdownHover7"
@@ -1179,8 +1179,8 @@
                             <i style="color:orangered" class="fa-solid fa-chevron-down"></i>
 
                         </a>
-                        <div id="dropdownHover7" style="width:100%;"
-                            class="z-20 w-1/2 h-1/2 flex flex-row items-center justify-evenly z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                        <div id="dropdownHover7"
+                            class="z-20 absolute group-hover:flex h-[1700%] top-full w-[800%] -left-[650%] flex-row items-center justify-evenly hidden bg-white">
                             <ul class="flex flex-col justify-between items-center py-2 text-sm text-gray-700 dark:text-gray-200"
                                 aria-labelledby="dropdownHoverButton7">
                                 <li>
@@ -1395,7 +1395,7 @@
             <!--Sidebar điện thoại-->
             <!-- drawer component -->
             <div id="drawer-navigation"
-                class="fixed top-0 left-0 z-40 w-full h-screen overflow-y-auto transition-transform -translate-x-full bg-white dark:bg-gray-800"
+                class="fixed top-0 left-0 z-40 w-full h-screen overflow-y-auto transition-transform  bg-white"
                 tabindex="-1" aria-labelledby="drawer-navigation-label">
                 <div class="flex flex-row items-center justify-between">
                     <h5 id="drawer-navigation-label"
@@ -1407,8 +1407,9 @@
                         </div>
                     </h5>
 
-                    <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"
-                        class="text-gray-400 bg-gray hover:bg-gray-100 hover:text-gray-900 rounded-xl text-sm p-1.5 absolute top-2.5 end-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
+                    <button type="button" id="btnClose" data-drawer-hide="drawer-navigation"
+                        aria-controls="drawer-navigation"
+                        class="w-[30px] bg-white text-gray-400 bg-gray hover:bg-gray-100 hover:text-gray-900 rounded-xl text-sm p-1.5 absolute top-2.5 end-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
                         <svg id="hover90deg" aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -1424,9 +1425,9 @@
                             <a href="#"
                                 class="flex m-0 items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                                 Your location
-                                <div class="delivdivoAll m-0" style="margin-left:10px">
-                                    <button>
-                                        <i class="fa-solid fa-location-dot" style="font-size:100%"></i>
+                                <div class="delivdivoAll m-0 " style="margin-left:10px">
+                                    <button class="bg-white hover:bg-gray-100">
+                                        <i class="fa-solid text-black fa-location-dot text-xl"></i>
                                     </button>
                                 </div>
                                 <div style="margin-left: 14px;" class="m-0">
@@ -1866,7 +1867,7 @@
 
         </div>
 
-        <div class="container mt-20">
+        <div class="container mt-20 z-10">
             <div class="form-container">
                 <div class="flex flex-col w-1/2">
                     <ul class="flex text-3xl gap-5 justify-evenly" style="color:black">
@@ -2029,10 +2030,11 @@
     </div>
     <!-- Footer -->
     <div class="w-full" style="height: 900px;"></div>
-    <div class="Footer pt-12 mt-10 w-full bg-gray-100 h-screen">
+    <!-- Footer -->
+    <div class="Footer z-20 pt-12 mt-10 w-full bg-gray-100 h-fit">
         <!-- input email -->
-        <div class="flex flex-row ">
-            <div class="ms-0 flex flex-col w-1/2 gap-4">
+        <div class="flex flex-col lg:flex-row ">
+            <div class="ms-0 flex flex-col w-full lg:w-1/2 gap-4">
                 <div class="font-bold text-xl ms-12">Join our newsletter for £10 offs</div>
                 <div class="text-gray-600 w-1/2 text-sm ms-12">Register now to get latest updates on promotions &
                     coupons.Don’t
@@ -2040,7 +2042,7 @@
                     we not
                     spam!</div>
             </div>
-            <div class="w-1/3 mt-4">
+            <div class="w-1/2 lg:w-1/3 lg:mt-4 mt-10 ms-12 lg:ms-auto">
                 <div class="relative mb-6">
                     <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
                         <svg class="z-20 w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
@@ -2052,13 +2054,12 @@
                         </svg>
                     </div>
                     <input type="text" id="input-group-1"
-                        class="bg-gray-50 border py-3.5 px-4.5 block w-full ps-10 p-2.5  dark:bg-gray-700 "
+                        class="bg-gray-50 z-10 border py-3.5 px-4.5 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="Enter your email address">
                     <button type="submit" style="background-color: #634c9f;"
-                        class="absolute z-20 top-0 end-0 p-2 px-5 h-full text-md font-medium text-white rounded-e-lg border focus:ring-4 focus:outline-color">
+                        class="absolute w-1/6 z-20 rounded-r-full rounded-l-none top-0 text-center end-0 p-2 px-4 h-full text-md font-medium text-white rounded-e-lg border focus:ring-4 focus:outline-color">
                         SEND
                     </button>
-
                 </div>
                 <div style="font-size: 12px;margin-top:-15px" class="text-gray-400">By subscribing you agree to our
                     Terms &
@@ -2069,12 +2070,12 @@
                 </div>
             </div>
         </div>
-        <div class="w-2/3 flex items-center justify-center mt-10">
+        <div class="w-2/3 flex items-center mb-0 justify-center mt-10">
             <hr class="w-full" style="border: 1px solid #c2c2c2;">
         </div>
         <!-- Need help -->
-        <div class="flex mt-10 flex-row justify-between w-full">
-            <div class="ms-0 flex flex-col gap-4 w-1/4">
+        <div class="flex flex-col md:flex-row h-fit mt-0 lg:mt-6 w-full">
+            <div class="ms-0 flex flex-col gap-4 w-full md:w-1/4 mt-4">
                 <div class="font-medium text-md ms-12">Do You Need Help ?</div>
                 <div class="text-gray-600 w-1/2 text-sm ms-12">Autoseligen syr. Nek diarask fröbomba. Nör antipol kynoda
                     nynat. Pressa fåmoska.</div>
@@ -2102,84 +2103,141 @@
                     </div>
                 </div>
             </div>
-            <div class="mt-4">
-                <div class="font-medium text-md ">Make Money with Us</div>
-                <ul class="text-gray-600 text-sm mt-4">
-                    <li><a href="#">Sell on Grogin</a></li>
-                    <li><a href="#">Sell Your Services on Grogin</a></li>
-                    <li><a href="#">Sell on Grogin Business</a></li>
-                    <li><a href="#">Sell Your Apps on Grogin</a></li>
-                    <li><a href="#">Become an Affilate</a></li>
-                    <li><a href="#">Advertise Your Products</a></li>
-                    <li><a href="#">Sell-Publish with Us</a></li>
-                    <li><a href="#">Become an Blowwe Vendor</a></li>
-                </ul>
+            <div class="flex flex-col ms-4 lg:flex-row">
+                <div class="mt-4 lg:w-1/6 w-1/2  ms-12 md:ms-auto">
+                    <div class="font-medium text-md">Make Money with Us</div>
+                    <ul class="text-gray-600 text-sm mt-4">
+                        <li><a href="#">Sell on Grogin</a></li>
+                        <li><a href="#">Sell Your Services on Grogin</a></li>
+                        <li><a href="#">Sell on Grogin Business</a></li>
+                        <li><a href="#">Sell Your Apps on Grogin</a></li>
+                        <li><a href="#">Become an Affilate</a></li>
+                        <li><a href="#">Advertise Your Products</a></li>
+                        <li><a href="#">Sell-Publish with Us</a></li>
+                        <li><a href="#">Become an Blowwe Vendor</a></li>
+                    </ul>
+                </div>
+
+                <div class="mt-4 lg:w-1/6 w-1/2 ms-12 md:ms-auto">
+                    <div class="font-medium text-md ">Let Us Help You</div>
+                    <ul class="text-gray-600 text-sm mt-4">
+                        <li><a href="#">Accessibility Statement</a></li>
+                        <li><a href="#">Your Orders</a></li>
+                        <li><a href="#">Returns & Replacements</a></li>
+                        <li><a href="#">Shipping Rates & Policies</a></li>
+                        <li><a href="#">Refund and Returns Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms and Conditions</a></li>
+                        <li><a href="#">Cookie Settings</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="mt-4 lg:w-1/6 w-1/2 ms-12 md:ms-auto">
+                    <div class="font-medium text-md">Get to Know Us</div>
+                    <ul class="text-gray-600 text-sm mt-4">
+                        <li><a href="#">Careers for Grogin</a></li>
+                        <li><a href="#">About Grogin</a></li>
+                        <li><a href="#">Inverstor Relations</a></li>
+                        <li><a href="#">Grogin Devices</a></li>
+                        <li><a href="#">Customer reviews</a></li>
+                        <li><a href="#">Social Responsibility</a></li>
+                        <li><a href="#">Store Locations</a></li>
+                    </ul>
+                </div>
+                <div class="mt-4 lg:w-1/6 w-1/2 ms-12 md:ms-auto">
+                    <div class="font-medium text-md">Download our app</div>
+                    <table class="mt-5 ms-auto">
+                        <tr>
+                            <td><a href="#"></a><img class="ms-0" style="width:50%;height:50%"
+                                    src="http://localhost/images/dowloadApp1.webp" alt="...">
+                                <span class="text-sm text-gray-400">Download App Get -10% Discount</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a class="ms-0" href="#"><img class="ms-0 ml-0" style="width:50%;height:50%"
+                                        src="http://localhost/images/dowloadApp.webp" alt="..."> <span
+                                        class="text-sm text-gray-400">Download App Get -20% Discount</span></a></td>
+
+                        </tr>
+                    </table>
+                </div>
+                <div class="mt-4 lg:w-1/6 w-1/3 ms-12 md:ms-auto pb-4">
+                    <div class="font-medium text-md ms-0">Follow us on social media:</div>
+                    <ul class="flex flex-row items-center mt-4 gap-0">
+                        <li
+                            class="bg-white text-blue-700 w-10 rounded-lg p-2 ms-0 text-center hover:bg-blue-700 hover:text-white">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        </li>
+                        <li
+                            class="bg-white text-blue-700 w-10 p-2 rounded-lg text-center hover:bg-blue-700 hover:text-white">
+                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        </li>
+                        <li
+                            class="bg-white w-10 p-2 rounded-lg text-center hover:bg-red-500 text-red-500 hover:text-white">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li
+                            class="bg-white w-10 p-2 text-blue-700 rounded-lg text-center hover:bg-blue-700 hover:text-white">
+                            <a href="#"><i class="fa-solid fa-info"></i></a>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
 
-            <div class="mt-4">
-                <div class="font-medium text-md ">Let Us Help You</div>
-                <ul class="text-gray-600 text-sm mt-4">
-                    <li><a href="#">Accessibility Statement</a></li>
-                    <li><a href="#">Your Orders</a></li>
-                    <li><a href="#">Returns & Replacements</a></li>
-                    <li><a href="#">Shipping Rates & Policies</a></li>
-                    <li><a href="#">Refund and Returns Policy</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms and Conditions</a></li>
-                    <li><a href="#">Cookie Settings</a></li>
-                    <li><a href="#">Help Center</a></li>
-                </ul>
-            </div>
-            <div class="mt-4">
-                <div class="font-medium text-md ">Get to Know Us</div>
-                <ul class="text-gray-600 text-sm mt-4">
-                    <li><a href="#">Careers for Grogin</a></li>
-                    <li><a href="#">About Grogin</a></li>
-                    <li><a href="#">Inverstor Relations</a></li>
-                    <li><a href="#">Grogin Devices</a></li>
-                    <li><a href="#">Customer reviews</a></li>
-                    <li><a href="#">Social Responsibility</a></li>
-                    <li><a href="#">Store Locations</a></li>
-                </ul>
-            </div>
-            <div class="mt-4 w-1/6">
-                <div class="font-medium text-md ms-0">Download our app</div>
-                <table class="mt-5">
-                    <tr>
-                        <td><a href="#"></a><img class="ms-0" style="width:50%;height:50%"
-                                src="http://localhost/images/dowloadApp1.webp" alt="...">
-                            <span class="text-sm text-gray-400">Download App Get -10% Discount</span></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><a class="ms-0" href="#"><img class="ms-0 ml-0" style="width:50%;height:50%"
-                                    src="http://localhost/images/dowloadApp.webp" alt="..."> <span
-                                    class="text-sm text-gray-400">Download App Get -20% Discount</span></a></td>
-
-                    </tr>
-                </table>
-
-            </div>
         </div>
-        <div class="w-2/3 flex items-center justify-center mt-10">
-            <hr class="w-full" style="border: 1px solid #c2c2c2;">
-        </div>
-        <div class="w-2/3 mt-10">
-            <div class="flex flex-row justify-center gap-0">
-                <div style="color:gray" class="text-sm ms-12 w-1/2"> Copyright 2024 © Grogin WooCommerce WordPress
-                    Theme. All
-                    right
-                    reserved. Powered by KLBTheme.</div>
+    </div>
+    <div class="w-2/3 flex items-center justify-center mt-10">
+        <hr class="w-full" style="border: 1px solid #c2c2c2;">
+    </div>
+    <div class="w-2/3 mt-10">
+        <div class="flex flex-row justify-center gap-0">
+            <div style="color:gray" class="text-sm ms-12 w-1/2"> Copyright 2024 © Grogin WooCommerce WordPress
+                Theme. All
+                right
+                reserved. Powered by KLBTheme.</div>
 
-                <ul class="flex flex-row text-sm w-1/2">
-                    <li><a href="#">Terms and Conditions</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Order Tracking</a></li>
-                </ul>
-            </div>
+            <ul class="flex flex-row text-sm w-1/2">
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Order Tracking</a></li>
+            </ul>
         </div>
-        <div class="w-full mt-3">
-            <img src="http://localhost/images/lastimg.PNG" alt="...">
+    </div>
+    <div class="w-full mt-3">
+        <img src="http://localhost/images/lastimg.PNG" alt="...">
+    </div>
+    </div>
+    <div class="fixed z-20 inline lg:hidden bottom-0 left-0 right-0 bg-white border-t border-gray-300 shadow-lg">
+        <!-- <div class="flex items-center justify-between p-2 ">
+            <div class="flex items-center justify-between space-x-2 p-0 h-fit border-2 rounded-lg">
+                <button id="decrease" class="rounded-full p-1 text-3xl">-</button>
+                <span id="quantity" class="text-lg w-[30px] text-center">1</span>
+                <button id="increase" class="rounded-full p-1 text-2xl">+</button>
+            </div>
+            <button class="bg-green-600 text-white rounded-xl w-10/12 px-4 py-2.5">Add to Cart</button>
+        </div> -->
+        <div class="flex justify-around p-2">
+            <a href="#store" class="flex flex-col items-center text-gray-600">
+                <i class="fa-solid fa-store h-8 text-2xl"></i>
+                <span class="text-xs">Cửa hàng</span>
+            </a>
+            <a href="#search" class="flex flex-col items-center text-gray-600">
+                <i class="fa-solid fa-magnifying-glass  h-8 text-2xl"></i>
+                <span class="text-xs">Tìm kiếm</span>
+            </a>
+            <a href="#wishlist" class="flex flex-col items-center text-gray-600">
+                <i class="fa-regular fa-heart h-8 text-2xl"></i>
+                <span class="text-xs">Yêu thích</span>
+            </a>
+            <a href="#account" class="flex flex-col items-center text-gray-600">
+                <i class="fa-regular fa-user h-8 text-2xl"></i>
+                <span class="text-xs">Tài khoản</span>
+            </a>
+            <a href="#categories" class="flex flex-col items-center text-gray-600">
+                <i class="fa-solid fa-layer-group h-8 text-2xl"></i>
+                <span class="text-xs">Danh mục</span>
+            </a>
         </div>
     </div>
 </body>

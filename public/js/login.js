@@ -7,6 +7,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const formRegister = document.querySelector(".form-register");
   const formLogin = document.querySelector(".form-login");
 
+  const navphone = document.getElementById("drawer-navigation");
+  const btnshowNav = document.getElementById("showNav");
+  const btncloseNav = document.getElementById("btnClose");
+
+  btnshowNav.addEventListener("click", function () {
+    navphone.classList.remove("-translate-x-full");
+    console.log("event is work");
+  });
+  btncloseNav.addEventListener("click", function () {
+    navphone.classList.add("-translate-x-full");
+    console.log("event is work");
+  });
   showLogin.addEventListener("click", function (e) {
     e.preventDefault();
     formRegister.classList.remove("active");

@@ -4598,10 +4598,10 @@
 
     </div>
     <!-- Footer -->
-    <div class="Footer pt-12 mt-10 w-full bg-gray-100 h-screen">
+    <div class="Footer z-20 pt-12 mt-10 w-full bg-gray-100 h-fit">
         <!-- input email -->
-        <div class="flex flex-row ">
-            <div class="ms-0 flex flex-col w-1/2 gap-4">
+        <div class="flex flex-col lg:flex-row ">
+            <div class="ms-0 flex flex-col w-full lg:w-1/2 gap-4">
                 <div class="font-bold text-xl ms-12">Join our newsletter for £10 offs</div>
                 <div class="text-gray-600 w-1/2 text-sm ms-12">Register now to get latest updates on promotions &
                     coupons.Don’t
@@ -4609,7 +4609,7 @@
                     we not
                     spam!</div>
             </div>
-            <div class="w-1/3 mt-4">
+            <div class="w-1/2 lg:w-1/3 lg:mt-4 mt-10 ms-12 lg:ms-auto">
                 <div class="relative mb-6">
                     <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
                         <svg class="z-20 w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
@@ -4638,12 +4638,12 @@
                 </div>
             </div>
         </div>
-        <div class="w-2/3 flex items-center justify-center mt-10">
+        <div class="w-2/3 flex items-center mb-0 justify-center mt-10">
             <hr class="w-full" style="border: 1px solid #c2c2c2;">
         </div>
         <!-- Need help -->
-        <div class="flex mt-10 flex-row justify-between w-full">
-            <div class="ms-0 flex flex-col gap-4 w-1/4">
+        <div class="flex flex-col md:flex-row h-fit mt-0 lg:mt-6 w-full">
+            <div class="ms-0 flex flex-col gap-4 w-full md:w-1/4 mt-4">
                 <div class="font-medium text-md ms-12">Do You Need Help ?</div>
                 <div class="text-gray-600 w-1/2 text-sm ms-12">Autoseligen syr. Nek diarask fröbomba. Nör antipol kynoda
                     nynat. Pressa fåmoska.</div>
@@ -4671,88 +4671,145 @@
                     </div>
                 </div>
             </div>
-            <div class="mt-4">
-                <div class="font-medium text-md ">Make Money with Us</div>
-                <ul class="text-gray-600 text-sm mt-4">
-                    <li><a href="#">Sell on Grogin</a></li>
-                    <li><a href="#">Sell Your Services on Grogin</a></li>
-                    <li><a href="#">Sell on Grogin Business</a></li>
-                    <li><a href="#">Sell Your Apps on Grogin</a></li>
-                    <li><a href="#">Become an Affilate</a></li>
-                    <li><a href="#">Advertise Your Products</a></li>
-                    <li><a href="#">Sell-Publish with Us</a></li>
-                    <li><a href="#">Become an Blowwe Vendor</a></li>
-                </ul>
+            <div class="flex flex-col ms-4 lg:flex-row">
+                <div class="mt-4 lg:w-1/6 w-1/2  ms-12 md:ms-auto">
+                    <div class="font-medium text-md">Make Money with Us</div>
+                    <ul class="text-gray-600 text-sm mt-4">
+                        <li><a href="#">Sell on Grogin</a></li>
+                        <li><a href="#">Sell Your Services on Grogin</a></li>
+                        <li><a href="#">Sell on Grogin Business</a></li>
+                        <li><a href="#">Sell Your Apps on Grogin</a></li>
+                        <li><a href="#">Become an Affilate</a></li>
+                        <li><a href="#">Advertise Your Products</a></li>
+                        <li><a href="#">Sell-Publish with Us</a></li>
+                        <li><a href="#">Become an Blowwe Vendor</a></li>
+                    </ul>
+                </div>
+
+                <div class="mt-4 lg:w-1/6 w-1/2 ms-12 md:ms-auto">
+                    <div class="font-medium text-md ">Let Us Help You</div>
+                    <ul class="text-gray-600 text-sm mt-4">
+                        <li><a href="#">Accessibility Statement</a></li>
+                        <li><a href="#">Your Orders</a></li>
+                        <li><a href="#">Returns & Replacements</a></li>
+                        <li><a href="#">Shipping Rates & Policies</a></li>
+                        <li><a href="#">Refund and Returns Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms and Conditions</a></li>
+                        <li><a href="#">Cookie Settings</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="mt-4 lg:w-1/6 w-1/2 ms-12 md:ms-auto">
+                    <div class="font-medium text-md">Get to Know Us</div>
+                    <ul class="text-gray-600 text-sm mt-4">
+                        <li><a href="#">Careers for Grogin</a></li>
+                        <li><a href="#">About Grogin</a></li>
+                        <li><a href="#">Inverstor Relations</a></li>
+                        <li><a href="#">Grogin Devices</a></li>
+                        <li><a href="#">Customer reviews</a></li>
+                        <li><a href="#">Social Responsibility</a></li>
+                        <li><a href="#">Store Locations</a></li>
+                    </ul>
+                </div>
+                <div class="mt-4 lg:w-1/6 w-1/2 ms-12 md:ms-auto">
+                    <div class="font-medium text-md">Download our app</div>
+                    <table class="mt-5 ms-auto">
+                        <tr>
+                            <td><a href="#"></a><img class="ms-0" style="width:50%;height:50%"
+                                    src="http://localhost/images/dowloadApp1.webp" alt="...">
+                                <span class="text-sm text-gray-400">Download App Get -10% Discount</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a class="ms-0" href="#"><img class="ms-0 ml-0" style="width:50%;height:50%"
+                                        src="http://localhost/images/dowloadApp.webp" alt="..."> <span
+                                        class="text-sm text-gray-400">Download App Get -20% Discount</span></a></td>
+
+                        </tr>
+                    </table>
+                </div>
+                <div class="mt-4 lg:w-1/6 w-1/3 ms-12 md:ms-auto pb-4">
+                    <div class="font-medium text-md ms-0">Follow us on social media:</div>
+                    <ul class="flex flex-row items-center mt-4 gap-0">
+                        <li
+                            class="bg-white text-blue-700 w-10 rounded-lg p-2 ms-0 text-center hover:bg-blue-700 hover:text-white">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        </li>
+                        <li
+                            class="bg-white text-blue-700 w-10 p-2 rounded-lg text-center hover:bg-blue-700 hover:text-white">
+                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        </li>
+                        <li
+                            class="bg-white w-10 p-2 rounded-lg text-center hover:bg-red-500 text-red-500 hover:text-white">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li
+                            class="bg-white w-10 p-2 text-blue-700 rounded-lg text-center hover:bg-blue-700 hover:text-white">
+                            <a href="#"><i class="fa-solid fa-info"></i></a>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
 
-            <div class="mt-4">
-                <div class="font-medium text-md ">Let Us Help You</div>
-                <ul class="text-gray-600 text-sm mt-4">
-                    <li><a href="#">Accessibility Statement</a></li>
-                    <li><a href="#">Your Orders</a></li>
-                    <li><a href="#">Returns & Replacements</a></li>
-                    <li><a href="#">Shipping Rates & Policies</a></li>
-                    <li><a href="#">Refund and Returns Policy</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms and Conditions</a></li>
-                    <li><a href="#">Cookie Settings</a></li>
-                    <li><a href="#">Help Center</a></li>
-                </ul>
-            </div>
-            <div class="mt-4">
-                <div class="font-medium text-md ">Get to Know Us</div>
-                <ul class="text-gray-600 text-sm mt-4">
-                    <li><a href="#">Careers for Grogin</a></li>
-                    <li><a href="#">About Grogin</a></li>
-                    <li><a href="#">Inverstor Relations</a></li>
-                    <li><a href="#">Grogin Devices</a></li>
-                    <li><a href="#">Customer reviews</a></li>
-                    <li><a href="#">Social Responsibility</a></li>
-                    <li><a href="#">Store Locations</a></li>
-                </ul>
-            </div>
-            <div class="mt-4 w-1/6">
-                <div class="font-medium text-md ms-0">Download our app</div>
-                <table class="mt-5">
-                    <tr>
-                        <td><a href="#"></a><img class="ms-0" style="width:50%;height:50%"
-                                src="http://localhost/images/dowloadApp1.webp" alt="...">
-                            <span class="text-sm text-gray-400">Download App Get -10% Discount</span></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><a class="ms-0" href="#"><img class="ms-0 ml-0" style="width:50%;height:50%"
-                                    src="http://localhost/images/dowloadApp.webp" alt="..."> <span
-                                    class="text-sm text-gray-400">Download App Get -20% Discount</span></a></td>
-
-                    </tr>
-                </table>
-
-            </div>
-        </div>
-        <div class="w-2/3 flex items-center justify-center mt-10">
-            <hr class="w-full" style="border: 1px solid #c2c2c2;">
-        </div>
-        <div class="w-2/3 mt-10">
-            <div class="flex flex-row justify-center gap-0">
-                <div style="color:gray" class="text-sm ms-12 w-1/2"> Copyright 2024 © Grogin WooCommerce WordPress
-                    Theme. All
-                    right
-                    reserved. Powered by KLBTheme.</div>
-
-                <ul class="flex flex-row text-sm w-1/2">
-                    <li><a href="#">Terms and Conditions</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Order Tracking</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="w-full mt-3">
-            <img src="http://localhost/images/lastimg.PNG" alt="...">
         </div>
     </div>
+    <div class="w-2/3 flex items-center justify-center mt-10">
+        <hr class="w-full" style="border: 1px solid #c2c2c2;">
     </div>
+    <div class="w-2/3 mt-10">
+        <div class="flex flex-row justify-center gap-0">
+            <div style="color:gray" class="text-sm ms-12 w-1/2"> Copyright 2024 © Grogin WooCommerce WordPress
+                Theme. All
+                right
+                reserved. Powered by KLBTheme.</div>
 
+            <ul class="flex flex-row text-sm w-1/2">
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Order Tracking</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="w-full mt-3">
+        <img src="http://localhost/images/lastimg.PNG" alt="...">
+    </div>
+    </div>
+    </div>
+    <!-- phần nav nằm dưới khi thu nhỏ thành điện thoại -->
+    <div class="fixed z-20 inline lg:hidden bottom-0 left-0 right-0 bg-white border-t border-gray-300 shadow-lg">
+        <!-- <div class="flex items-center justify-between p-2 ">
+            <div class="flex items-center justify-between space-x-2 p-0 h-fit border-2 rounded-lg">
+                <button id="decrease" class="rounded-full p-1 text-3xl">-</button>
+                <span id="quantity" class="text-lg w-[30px] text-center">1</span>
+                <button id="increase" class="rounded-full p-1 text-2xl">+</button>
+            </div>
+            <button class="bg-green-600 text-white rounded-xl w-10/12 px-4 py-2.5">Add to Cart</button>
+        </div> -->
+        <div class="flex justify-around p-2">
+            <a href="#store" class="flex flex-col items-center text-gray-600">
+                <i class="fa-solid fa-store h-8 text-2xl"></i>
+                <span class="text-xs">Cửa hàng</span>
+            </a>
+            <a href="#search" class="flex flex-col items-center text-gray-600">
+                <i class="fa-solid fa-magnifying-glass  h-8 text-2xl"></i>
+                <span class="text-xs">Tìm kiếm</span>
+            </a>
+            <a href="#wishlist" class="flex flex-col items-center text-gray-600">
+                <i class="fa-regular fa-heart h-8 text-2xl"></i>
+                <span class="text-xs">Yêu thích</span>
+            </a>
+            <a href="#account" class="flex flex-col items-center text-gray-600">
+                <i class="fa-regular fa-user h-8 text-2xl"></i>
+                <span class="text-xs">Tài khoản</span>
+            </a>
+            <a href="#categories" class="flex flex-col items-center text-gray-600">
+                <i class="fa-solid fa-layer-group h-8 text-2xl"></i>
+                <span class="text-xs">Danh mục</span>
+            </a>
+        </div>
+    </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
