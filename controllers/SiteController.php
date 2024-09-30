@@ -24,4 +24,10 @@ class SiteController extends Controller
         ];
         return Application::$app->router->renderView("home", $params);
     }
+
+    public function shopCart()
+{
+    return $this->render("shopCart");
+}
+
 }

@@ -1395,7 +1395,7 @@
             <!--Sidebar điện thoại-->
             <!-- drawer component -->
             <div id="drawer-navigation"
-                class="fixed top-0 left-0 z-40 w-full h-screen overflow-y-auto transition-transform  bg-white"
+                class="fixed top-0 left-0 z-40 w-full h-screen overflow-y-auto -translate-x-full transition-transform  bg-white"
                 tabindex="-1" aria-labelledby="drawer-navigation-label">
                 <div class="flex flex-row items-center justify-between">
                     <h5 id="drawer-navigation-label"

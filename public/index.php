@@ -26,4 +26,13 @@ $app->router->post('/login', [AuthController::class, 'login']);
 $app->router->get('/register', [AuthController::class, 'register']);
 $app->router->post('/register', [AuthController::class, 'register']);
 
+$app->router->get('/shopCart', function() use ($app) {
+    echo $app->router->renderFile('shopCart.php');
+});
+$app->router->get('/manageUser', function() use ($app) {
+    echo $app->router->renderFile('manageUser.php');
+});
+$app->router->get('/detailProduct', function() use ($app) {
+    echo $app->router->renderFile('detailProduct.php');
+});
 $app->run();

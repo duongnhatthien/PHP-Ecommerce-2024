@@ -4589,7 +4589,7 @@
             </div>
         </div>
     </div>
-    <!-- <div class="content flex flex-row justify-between"> {{content}} </div> -->
+
     <br>
     <br>
     <div class="w-2/3 flex items-center justify-center">
@@ -4810,6 +4810,7 @@
             </a>
         </div>
     </div>
+    <div class="content flex flex-row justify-between"> {{content}} </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

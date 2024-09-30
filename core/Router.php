@@ -5,6 +5,7 @@ class Router
     public Request $request;
     public Response $response;
     protected array $routes = [];
+    
     public function __construct(Request $request, Response $response)
     {
         $this->response = $response;
@@ -47,8 +48,7 @@ class Router
     }
     
     protected function layoutContent()
-    {
-        $layout = ''; // Default layout
+    { 
         if (Application::$app->controller) {
             $layout = Application::$app->controller->layout;
         }
@@ -58,7 +58,6 @@ class Router
     }
     protected function renderOnlyView(string $view, array $params = [])
     {
-
         foreach ($params as $key => $value) {
             $$key = $value;
         }
@@ -71,4 +70,10 @@ class Router
         $layoutContent = $this->layoutContent();
         return str_replace('{{content}}', $content, $layoutContent);
     }
+    public function renderFile($filename)
+{
+    ob_start();
+    include_once Application::$ROOT_DIR . "/views/$filename";
+    return ob_get_clean();
+}
 }
