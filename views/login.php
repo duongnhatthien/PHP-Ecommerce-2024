@@ -123,7 +123,7 @@
                         <div class="flex items-center space-x-6 rtl:space-x-reverse">
                             <ul
                                 class="infor text-sm font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                                <li>
+                                <li class="relative group">
                                     <a href="#"
                                         class="block py-2 px-3 text-gray-900 rounded md:bg-transparent md:text-grey-700 md:p-0 dark:text-white md:dark:text-grey-500"
                                         aria-current="page" id="dropdownHoverButton"
@@ -135,7 +135,7 @@
 
                                     </a>
                                     <div id="dropdownHover" style="width: 90px;"
-                                        class="z-20 w-1/2 flex flex-col items-center justify-evenly z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                                        class="absolute group-hover:flex -left-[30%] z-20 w-1/2 flex flex-col items-center justify-evenly z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                                         <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
                                             aria-labelledby="dropdownHoverButton">
                                             <li>
@@ -153,7 +153,7 @@
                                         </ul>
                                     </div>
                                 </li>
-                                <li>
+                                <li class="group relative">
                                     <a href="#"
                                         class="block py-2 px-3 text-gray-900 rounded md:bg-transparent md:text-grey-700 md:p-0 dark:text-white md:dark:text-grey-500"
                                         aria-current="page" id="dropdownHoverButton1"
@@ -162,7 +162,7 @@
                                         type="button">USD <i style="color:#634c9f" class="fa-solid fa-chevron-down"></i>
                                     </a>
                                     <div id="dropdownHover1" style="width: 90px;"
-                                        class="flex items-center justify-evenly z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                                        class="absolute group-hover:flex -left-[68%] flex items-center justify-evenly z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                                         <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
                                             aria-labelledby="dropdownHoverButton1">
                                             <li>
@@ -2026,7 +2026,6 @@
                 </div>
             </div>
         </div>
-
     </div>
     <!-- Footer -->
     <div class="w-full" style="height: 900px;"></div>

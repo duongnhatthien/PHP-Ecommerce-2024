@@ -12,7 +12,6 @@
     <style>
     * {
         box-sizing: border-box;
-
     }
 
     .divTong {
@@ -1955,7 +1954,7 @@
                             </div>
                         </div> -->
 
-                        <div class="mb-6">
+                        <div class="mb-6 hidden lg:inline">
                             <label for="quantity" class="block text-sm font-medium text-gray-700 mb-1">Quantity:</label>
                             <div class="flex">
                                 <div
@@ -1968,7 +1967,7 @@
                                     Cart</button>
                             </div>
                         </div>
-                        <ul class="border-2">
+                        <ul class="border-2 mt-6">
                             <li class="border-b-2">
                                 <div class="flex flex-row items-center justify-between">
                                     <div class="left p-5 pt-1 text-2xl"><i class="fa-regular fa-credit-card"></i></div>

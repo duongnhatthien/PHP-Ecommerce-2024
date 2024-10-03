@@ -35,4 +35,7 @@ $app->router->get('/manageUser', function() use ($app) {
 $app->router->get('/detailProduct', function() use ($app) {
     echo $app->router->renderFile('detailProduct.php');
 });
+$app->router->get('/contact', function() use ($app) {
+    echo $app->router->renderFile('contact.php');
+});
 $app->run();
