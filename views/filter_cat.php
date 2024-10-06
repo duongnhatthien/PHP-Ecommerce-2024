@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/countdown.css">
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
     * {
         box-sizing: border-box;
+        margin: auto;
     }
 
     .divTong {
-        width: 96%;
+        width: 95%;
         height: fit-content;
     }
 
@@ -68,6 +69,74 @@
 
     .input-container {
         position: relative;
+    }
+
+    /* two slider */
+    .range-slide {
+        position: relative;
+        height: 4px;
+    }
+
+    .slide {
+        position: absolute;
+        top: 0;
+        height: 4px;
+        background: #ccc;
+        left: 9px;
+        right: 9px;
+    }
+
+    .line {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 4px;
+        background-color: black;
+    }
+
+    .thumb {
+        position: absolute;
+        z-index: 2;
+        text-align: left;
+        border: 1px solid black;
+        background-color: black;
+        border-radius: 50%;
+        outline: none;
+        top: -7px;
+        height: 18px;
+        width: 18px;
+        margin-left: -9px;
+    }
+
+    .range-slide input {
+        -webkit-appearance: none;
+        appearance: none;
+        position: absolute;
+        pointer-events: none;
+        z-index: 3;
+        height: 3px;
+        top: 0;
+        width: 100%;
+        opacity: 0;
+        margin: 0;
+    }
+
+    input::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        pointer-events: all;
+        border-radius: 50%;
+        cursor: pointer;
+        width: 18px;
+        height: 18px;
+    }
+
+    .display {
+        margin: 40px;
+        width: 240px;
+        display: flex;
+        justify-content: space-between;
     }
     </style>
 </head>
@@ -195,9 +264,8 @@
         <!-- Navbar section start -->
         <!-- Navbar section start -->
         <nav class="bg-white border-gray-200 dark:bg-gray-900  w-full">
-            <div
-                class="w-full flex flex-wrap justify-between h-16 lg:justify-evenly lg:items-center pt-3 lg:pt-4 lg:pb-4">
-                <div class="flex ml-0 lg:hidden text-center">
+            <div class="w-full flex flex-wrap flex-row h-16 pt-3 lg:pt-4 lg:pb-4">
+                <div class="flex ml-0 lg:hidden text-center lg:m-0 m-auto">
                     <button
                         class="bg-white hover:bg-gray-300 text-black focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5"
                         type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation"
@@ -205,7 +273,7 @@
                         <i id="showNav" style="font-size: 160%;" class="fa-solid fa-bars"></i>
                     </button>
                 </div>
-                <div class="ms-2 sm:w-1/3 md:w-1/3 lg:w-1/6">
+                <div class="ms-2 sm:w-1/3 md:w-1/3 lg:w-1/6 m-auto lg:m-0">
                     <img style="object-fit: cover;"
                         src="https://klbtheme.com/grogin/wp-content/uploads/2023/11/grogin-logo-dark.png" alt="Logo">
                 </div>
@@ -222,27 +290,27 @@
                     </button>
 
                 </div>
-                <div class="hidden lg:flex">
+                <div class="hidden lg:flex m-0">
                     <p style="font-size:12px" class="text-gray-500 dark:text-white">
                         <span style="color:rgb(199, 199, 199)">Deliver to </span><br>all
                     </p>
                 </div>
-                <div class="relative flex items-center justify-between hidden lg:flex divInput"
-                    style="width: 55%;position:relative">
+                <div class="xl:w-[55%] lg:w-[40%] relative flex items-center justify-between hidden lg:flex divInput"
+                    style="position:relative">
                     <input id="inputField" type="text"
                         style="width: 100%;padding:12px 12px;border:none;outline-color: #634c9f;"
                         placeholder="Search for products,categories or brands...">
                     <span class="search-icon" style="z-index:12"><i style="font-size: 140%;"
                             class="fa-solid fa-magnifying-glass"></i></span>
                 </div>
-                <div class="flex lg:items-center w-full lg:w-1/6 justify-evenly space-x-6 ml-5">
-                    <a class="hidden lg:flex" href="tel:5541251234" id="dropdownUserAvatarButton"
+                <div class="flex lg:items-center  w-full lg:w-1/6 justify-evenly space-x-6 ml-2">
+                    <a class="hidden relative  lg:flex" href="tel:5541251234" id="dropdownUserAvatarButton"
                         data-dropdown-toggle="dropdownAvatar"
-                        class="flex text-sm rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                        class="flex text-sm rounded-full m-0 md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
                         type="button" class="hidden lg:flex text-sm  text-gray-500 dark:text-white hover:underline"><i
-                            style="font-size: 160%;" class="fa-regular fa-user text-black"></i></a>
+                            style="font-size: 160%;" class="group fa-regular fa-user text-black"></i></a>
                     <div id="dropdownAvatar"
-                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                        class="z-10 group-hover:inline absolute hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
                         <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
                             <div>Phạm Trị</div>
                             <div class="font-medium truncate">phamminhtri26102003@gmail.com</div>
@@ -290,13 +358,14 @@
 
         </nav>
         <!--sidebar pc-->
-        <div class="flex justify-between w-full">
+        <div class="flex ps-0 justify-center max-w-screen-3xl w-full items-center">
 
             <!--Carousel
         -->
-            <div class="flex w-full flex-col mt-4 ml-0 lg:ml-8">
-                <ul class="hidden w-full infor text-sm flex-row font-medium lg:flex items-center justify-between p-3">
-                    <li class="m-0 group relative">
+            <div class="flex w-full p-0 flex-col mt-4 ml-0 items-center justify-evenly md:ml-3 lg:ml-2">
+                <ul
+                    class="hidden w-full ps-0 ms-0 infor text-sm flex-row font-medium lg:flex items-center justify-between p-3">
+                    <li class="ms-0 group relative">
                         <a href=" #" style="font-size: 16px;color:#634c9f"
                             class="block py-2 px-3 text-gray-900 rounded md:bg-transparent md:text-grey-700 md:p-0 dark:text-white md:dark:text-grey-500"
                             aria-current="page" id="dropdownHoverButton2" data-dropdown-toggle="dropdownHover2"
@@ -1865,687 +1934,856 @@
             <!-- Navbar section end -->
 
         </div>
+    </div>
+    <!-- Breadcrumb -->
+    <nav class="flex mt-5 ms-10" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+            <li class="inline-flex items-center">
+                <a href="#"
+                    class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
+                    <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
+                    </svg>
+                    Home
+                </a>
+            </li>
+            <li aria-current="page">
+                <div class="flex items-center">
+                    <svg class="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 9 4-4-4-4" />
+                    </svg>
+                    <span class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">Shop</span>
+                </div>
+            </li>
+        </ol>
+    </nav>
+    <div class="w-full flex mt-5 ms-10">
+        <div class="w-[300px] h-full m-0 top-0 left-0" id="sidebarSticky">
+            <div class="text-md font-semibold mb-5">Widget price filter</div>
+            <div class="w-full flex flex-row justify-evenly gap-3 m-0">
+                <div class="flex flex-col w-3/7">
+                    <label for="" class="m-0 text-sm text-gray-400">Min price</label>
+                    <input id="min" type="text" value="0"
+                        class="z-0 w-full bg-white p-2 border border-gray-300 rounded">
+                </div>
+                <div class="w-1/7 pt-6"><i class="fa-solid fa-minus"></i></div>
+                <div class="flex flex-col w-3/7">
+                    <label for="" class="m-0 text-sm text-gray-400">Max price</label>
+                    <input type="text" id="currentValue" value="30"
+                        class="w-full bg-white p-2 border border-gray-300 z-0 rounded">
+                </div>
+            </div>
+            <div class="range-slide mt-6">
+                <div class="slide">
+                    <div class="line" id="line" style="left: 0%; right: 0%;"></div>
+                    <span class="thumb" id="thumbMin" style="left: 0%;"></span>
+                    <span class="thumb" id="thumbMax" style="left: 100%;"></span>
+                </div>
+                <input id="rangeMin" type="range" max="30" min="0" step="10" value="0">
+                <input id="rangeMax" type="range" max="30" min="0" step="10" value="30">
+            </div>
+            <!-- <div class="display">
+                <span>$0</span>
+                <span id="max">$30</span>
+            </div> -->
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let min = 0;
+                let max = 30;
+
+                const calcLeftPosition = value => 100 / (30 - 0) * (value - 0);
 
 
+                $('#rangeMin').on('input', function(e) {
+                    const newValue = parseInt(e.target.value);
+                    if (newValue > max) return;
+                    min = newValue;
+                    $('#thumbMin').css('left', calcLeftPosition(newValue) + '%');
+                    $('#min').val('$' + newValue);
+                    $('#currentValueTextMin').html('$' + newValue);
+                    $('#line').css({
+                        'left': calcLeftPosition(newValue) + '%',
+                        'right': (100 - calcLeftPosition(max)) + '%'
+                    });
+                });
 
-        <!-- Detail product -->
-        <div class="bg-gray-50">
-            <div class="container mx-auto px-4 py-8">
-                <div class="flex flex-wrap -mx-4">
-                    <!-- Product Images -->
-                    <div class="w-full md:w-1/2 px-4 mb-8">
-                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxfHxoZWFkcGhvbmV8ZW58MHwwfHx8MTcyMTMwMzY5MHww&ixlib=rb-4.0.3&q=80&w=1080"
-                            alt="Product" class="w-full h-auto rounded-lg shadow-md mb-4" id="mainImage">
-                        <div class="flex gap-4 py-4 justify-center overflow-x-auto">
-                            <img src="https://images.unsplash.com/photo-1505751171710-1f6d0ace5a85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxMnx8aGVhZHBob25lfGVufDB8MHx8fDE3MjEzMDM2OTB8MA&ixlib=rb-4.0.3&q=80&w=1080"
-                                alt="Thumbnail 1"
-                                class="size-16 sm:size-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300"
-                                onclick="changeImage(this.src)">
-                            <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw0fHxoZWFkcGhvbmV8ZW58MHwwfHx8MTcyMTMwMzY5MHww&ixlib=rb-4.0.3&q=80&w=1080"
-                                alt="Thumbnail 2"
-                                class="size-16 sm:size-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300"
-                                onclick="changeImage(this.src)">
-                            <img src="https://images.unsplash.com/photo-1496957961599-e35b69ef5d7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw4fHxoZWFkcGhvbmV8ZW58MHwwfHx8MTcyMTMwMzY5MHww&ixlib=rb-4.0.3&q=80&w=1080"
-                                alt="Thumbnail 3"
-                                class="size-16 sm:size-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300"
-                                onclick="changeImage(this.src)">
-                            <img src="https://images.unsplash.com/photo-1528148343865-51218c4a13e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwzfHxoZWFkcGhvbmV8ZW58MHwwfHx8MTcyMTMwMzY5MHww&ixlib=rb-4.0.3&q=80&w=1080"
-                                alt="Thumbnail 4"
-                                class="size-16 sm:size-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition duration-300"
-                                onclick="changeImage(this.src)">
-                        </div>
-                    </div>
+                $('#rangeMax').on('input', function(e) {
+                    const newValue = parseInt(e.target.value);
+                    if (newValue < min) return;
+                    max = newValue;
+                    $('#thumbMax').css('left', calcLeftPosition(newValue) + '%');
+                    $('#max').html('$' + newValue);
+                    $('#line').css({
+                        'left': calcLeftPosition(min) + '%',
+                        'right': (100 - calcLeftPosition(newValue)) + '%'
+                    });
+                });
+            });
+            </script>
+            <div class="flex flex-row mt-6 justify-between">
+                <div class="flex flex-row m-0">
+                    <div>Price: <span class="ms-1" id="currentValueTextMin">$0</span> </div>
+                    <div>
+                        <i class="fa-solid fa-minus w-4 ms-2 text-xl"></i>
+                    </div> <span class="ms-1" id="currentValueTextMax">$30</span>
+                </div>
+                <button class="px-4 py-2 ml-0 rounded-md bg-gray-300 m-0">Filter</button>
+            </div>
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const rangeInput = document.getElementById('rangeMax');
+                const currentValueInput = document.getElementById('currentValue');
+                const currentValueSpanMax = document.getElementById('currentValueTextMax');
 
-                    <!-- Product Details -->
-                    <div class="w-full md:w-1/2 px-4">
-                        <h2 class="text-3xl font-bold mb-2">Premium Wireless Headphones</h2>
-                        <p class="text-gray-600 mb-4">SKU: WH1000XM4</p>
-                        <div class="mb-4">
-                            <span class="text-2xl text-red-500 font-bold mr-2">$349.99</span>
-                            <span class="text-red-500 line-through">$399.99</span>
-                        </div>
-                        <div class="flex items-center mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="size-6 text-yellow-500">
-                                <path fill-rule="evenodd"
-                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="size-6 text-yellow-500">
-                                <path fill-rule="evenodd"
-                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="size-6 text-yellow-500">
-                                <path fill-rule="evenodd"
-                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="size-6 text-yellow-500">
-                                <path fill-rule="evenodd"
-                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="size-6 text-yellow-500">
-                                <path fill-rule="evenodd"
-                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <span class="ml-2 text-gray-600">4.5 (120 reviews)</span>
-                        </div>
-                        <p class="text-gray-700 mb-6">Experience premium sound quality and industry-leading noise
-                            cancellation
-                            with
-                            these wireless headphones. Perfect for music lovers and frequent travelers.</p>
+                rangeInput.addEventListener('input', function() {
+                    currentValueInput.value = Math.round(rangeInput.value);
+                    currentValueSpan.innerHTML = '$' + Math.round(rangeInput.value);
+                    currentValueSpanMax.innerHTML = '$' + Math.round(rangeInput.value);
 
-                        <!-- <div class="mb-6">
-                            <h3 class="text-lg font-semibold mb-2">Color:</h3>
-                            <div class="flex space-x-2">
-                                <button
-                                    class="w-8 h-8 bg-black rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"></button>
-                                <button
-                                    class="w-8 h-8 bg-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300"></button>
-                                <button
-                                    class="w-8 h-8 bg-blue-500 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"></button>
-                            </div>
-                        </div> -->
+                });
+            });
+            </script>
+            <hr class="bg-gray-200 mt-4 mb-4">
+            <div>
+                <h4 class="text-md font-semibold mb-3"> Product Categories</h4>
+                <div>
+                    <ul class="">
+                        <li class="flex flex-row justify-between group1">
+                            <a class="m-0 flex flex-row gap-2" href="#">
+                                <div class="inline-flex items-center">
+                                    <label class="flex items-center cursor-pointer relative">
+                                        <input type="checkbox"
+                                            class="peer h-5 bg-white w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-purple-600 checked:border-purple-600"
+                                            id="checkbox1" />
+                                        <span
+                                            class="absolute z-20 text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                stroke-width="1">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div><label for="">Fruits
+                                    &
+                                    Vegetables
+                                </label>
+                            </a>
+                            <span class="m-0"><i id="icon1" class="fa-solid fa-plus text-sm text-gray-400"></i></span>
 
-                        <div class="mb-6 hidden lg:inline">
-                            <label for="quantity" class="block text-sm font-medium text-gray-700 mb-1">Quantity:</label>
-                            <div class="flex">
-                                <div
-                                    class="flex items-center justify-around space-x-2 p-auto h-fit border-2 rounded-lg">
-                                    <button id="decrease" class="rounded-full p-1 text-3xl">-</button>
-                                    <span id="quantity" class="text-lg w-[30px] text-center">1</span>
-                                    <button id="increase" class="rounded-full p-1 text-2xl">+</button>
-                                </div>
-                                <button class="ms-6 bg-green-600 text-white rounded-xl w-4/12 px-4 py-2.5">Add to
-                                    Cart</button>
-                            </div>
-                        </div>
-                        <ul class="border-2 mt-6">
-                            <li class="border-b-2">
-                                <div class="flex flex-row items-center justify-between">
-                                    <div class="left p-5 pt-1 text-2xl"><i class="fa-regular fa-credit-card"></i></div>
-                                    <div class="right p-4 pt-2 ps-2 text-gray-500"><span class="text-black">
-                                            Payment</span>.
-                                        Payment
-                                        upon
-                                        receipt of
-                                        goods, Payment by card in the
-                                        department, Google Pay, Online card, -5% discount in case of payment</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="flex flex-row items-center justify-between">
-                                    <div class="left p-5 pt-1 text-2xl"><i class="fa-solid fa-shield"></i></div>
-                                    <div class="right p-4 pt-2 ps-2 text-gray-500"><span
-                                            class="text-black">Warranty</span>. The
-                                        Consumer
-                                        Protection
-                                        Act does not provide for the
-                                        return of this product of proper quality.</div>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="flex space-x-4 mb-6 mt-6">
-                            <!-- <button
-                                class="bg-green-500 flex gap-2 items-center text-white px-6 py-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                                </svg>
-                                Add to Cart
-                            </button> -->
-                            <button
-                                class="bg-gray-200 flex gap-2 items-center  text-gray-800 px-6 py-2 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="size-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-                                </svg>
-                                Add to Wishlist
-                            </button>
-                            <button
-                                class="bg-gray-200 flex gap-2 items-center  text-gray-800 px-6 py-2 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
-                                <i class="fa-solid fa-share"></i>
-                                Share this Product
-                            </button>
-                            <button
-                                class="bg-gray-200 flex gap-2 items-center  text-gray-800 px-6 py-2 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
-                                <i class="fa-solid fa-code-compare"></i>
-                                Compare
-                            </button>
+                        </li>
+                        <div class="dropdownCheckbox1 ps-8">
+                            <ul>
+                                <li class="flex flex-row justify-between group1 mt-1"><a class="m-0 flex flex-row gap-2"
+                                        href="#">
+                                        <div class="inline-flex items-center">
+                                            <label class="flex items-center cursor-pointer relative">
+                                                <input type="checkbox"
+                                                    class="peer h-5 bg-white w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-purple-600 checked:border-purple-600"
+                                                    id="checkbox1" />
+                                                <span
+                                                    class="absolute z-20 text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                        viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                        stroke-width="1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </span>
+                                            </label>
+                                        </div><label for="">Cuts &Sprouts
+                                        </label>
+                                    </a></li>
+                                <li class="flex flex-row justify-between group2 mt-2"><a class="m-0 flex flex-row gap-2"
+                                        href="#">
+                                        <div class="inline-flex items-center">
+                                            <label class="flex items-center cursor-pointer relative">
+                                                <input type="checkbox"
+                                                    class="peer h-5 bg-white w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-purple-600 checked:border-purple-600"
+                                                    id="checkbox1" />
+                                                <span
+                                                    class="absolute z-20 text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                        viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                        stroke-width="1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </span>
+                                            </label>
+                                        </div><label for="">Exotic Fruits & Veggies
+                                        </label>
+                                    </a></li>
+                                <li class="flex flex-row justify-between group3 mt-2"><a class="m-0 flex flex-row gap-2"
+                                        href="#">
+                                        <div class="inline-flex items-center">
+                                            <label class="flex items-center cursor-pointer relative">
+                                                <input type="checkbox"
+                                                    class="peer h-5 bg-white w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-purple-600 checked:border-purple-600"
+                                                    id="checkbox1" />
+                                                <span
+                                                    class="absolute z-20 text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                        viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                        stroke-width="1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </span>
+                                            </label>
+                                        </div><label for="">Fresh Fruits
 
-                        </div>
-
-                        <div>
-                            <h3 class="text-lg font-semibold mb-2">Key Features:</h3>
-                            <ul class="list-disc list-inside text-gray-700">
-                                <li>Industry-leading noise cancellation</li>
-                                <li>30-hour battery life</li>
-                                <li>Touch sensor controls</li>
-                                <li>Speak-to-chat technology</li>
+                                        </label>
+                                    </a></li>
+                                <li class="flex flex-row justify-between group4 mt-2"><a class="m-0 flex flex-row gap-2"
+                                        href="#">
+                                        <div class="inline-flex items-center">
+                                            <label class="flex items-center cursor-pointer relative">
+                                                <input type="checkbox"
+                                                    class="peer h-5 bg-white w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-purple-600 checked:border-purple-600"
+                                                    id="checkbox1" />
+                                                <span
+                                                    class="absolute z-20 text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                        viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                        stroke-width="1">
+                                                        <path fill-rule="evenodd"
+                                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </span>
+                                            </label>
+                                        </div><label for="">Fresh Vegetables
+                                        </label>
+                                    </a></li>
                             </ul>
                         </div>
-                    </div>
+                        <li class="flex flex-row justify-between group1">
+                            <a class="m-0 flex flex-row gap-2" href="#">
+                                <div class="inline-flex items-center">
+                                    <label class="flex items-center cursor-pointer relative">
+                                        <input type="checkbox"
+                                            class="peer h-5 bg-white w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-purple-600 checked:border-purple-600"
+                                            id="checkbox1" />
+                                        <span
+                                            class="absolute z-20 text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                stroke-width="1">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div><label for=""> Baby & Pregnancy
+                                </label>
+                            </a>
+
+
+                        </li>
+                        <li class="flex flex-row justify-between group1">
+                            <a class="m-0 flex flex-row gap-2" href="#">
+                                <div class="inline-flex items-center">
+                                    <label class="flex items-center cursor-pointer relative">
+                                        <input type="checkbox"
+                                            class="peer h-5 bg-white w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-purple-600 checked:border-purple-600"
+                                            id="checkbox1" />
+                                        <span
+                                            class="absolute z-20 text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                stroke-width="1">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div><label for=""> Beverages
+                                </label>
+                            </a>
+                            <span class="m-0"><i id="icon1" class="fa-solid fa-plus text-sm text-gray-400"></i></span>
+
+                        </li>
+                        <li class="flex flex-row justify-between group1">
+                            <a class="m-0 flex flex-row gap-2" href="#">
+                                <div class="inline-flex items-center">
+                                    <label class="flex items-center cursor-pointer relative">
+                                        <input type="checkbox"
+                                            class="peer h-5 bg-white w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-purple-600 checked:border-purple-600"
+                                            id="checkbox1" />
+                                        <span
+                                            class="absolute z-20 text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                stroke-width="1">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div><label for=""> Meat &
+                                    Seafood
+                                </label>
+                            </a>
+                            <span class="m-0"><i id="icon1" class="fa-solid fa-plus text-sm text-gray-400"></i></span>
+
+                        </li>
+
+                        <li class="flex flex-row justify-between group1">
+                            <a class="m-0 flex flex-row gap-2" href="#">
+                                <div class="inline-flex items-center">
+                                    <label class="flex items-center cursor-pointer relative">
+                                        <input type="checkbox"
+                                            class="peer h-5 bg-white w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-purple-600 checked:border-purple-600"
+                                            id="checkbox1" />
+                                        <span
+                                            class="absolute z-20 text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                stroke-width="1">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div><label for="">Biscuits & Snacks
+                                </label>
+                            </a>
+
+
+                        </li>
+                        <li class="flex flex-row justify-between group1">
+                            <a class="m-0 flex flex-row gap-2" href="#">
+                                <div class="inline-flex items-center">
+                                    <label class="flex items-center cursor-pointer relative">
+                                        <input type="checkbox"
+                                            class="peer h-5 bg-white w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-purple-600 checked:border-purple-600"
+                                            id="checkbox1" />
+                                        <span
+                                            class="absolute z-20 text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                stroke-width="1">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div><label for="">Breads & Bakerys
+                                </label>
+                            </a>
+                            <span class="m-0"><i id="icon1" class="fa-solid fa-plus text-sm text-gray-400"></i></span>
+
+                        </li>
+                        <li class="flex flex-row justify-between group1">
+                            <a class="m-0 flex flex-row gap-2" href="#">
+                                <div class="inline-flex items-center">
+                                    <label class="flex items-center cursor-pointer relative">
+                                        <input type="checkbox"
+                                            class="peer h-5 bg-white w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-purple-600 checked:border-purple-600"
+                                            id="checkbox1" />
+                                        <span
+                                            class="absolute z-20 text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                stroke-width="1">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div><label for="">Breakfasts & Dairy
+                                </label>
+                            </a>
+                            <span class="m-0"><i id="icon1" class="fa-solid fa-plus text-sm text-gray-400"></i></span>
+
+                        </li>
+                        <li class="flex flex-row justify-between group1">
+                            <a class="m-0 flex flex-row gap-2" href="#">
+                                <div class="inline-flex items-center">
+                                    <label class="flex items-center cursor-pointer relative">
+                                        <input type="checkbox"
+                                            class="peer h-5 bg-white w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-purple-600 checked:border-purple-600"
+                                            id="checkbox1" />
+                                        <span
+                                            class="absolute z-20 text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                stroke-width="1">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div><label for="">Frozen Foods
+                                </label>
+                            </a>
+
+
+                        </li>
+                        <li class="flex flex-row justify-between group1">
+                            <a class="m-0 flex flex-row gap-2" href="#">
+                                <div class="inline-flex items-center">
+                                    <label class="flex items-center cursor-pointer relative">
+                                        <input type="checkbox"
+                                            class="peer h-5 bg-white w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-purple-600 checked:border-purple-600"
+                                            id="checkbox1" />
+                                        <span
+                                            class="absolute z-20 text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                stroke-width="1">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div><label for=""> Grocery & Staples
+                                </label>
+                            </a>
+
+
+                        </li>
+                        <li class="flex flex-row justify-between group1">
+                            <a class="m-0 flex flex-row gap-2" href="#">
+                                <div class="inline-flex items-center">
+                                    <label class="flex items-center cursor-pointer relative">
+                                        <input type="checkbox"
+                                            class="peer h-5 bg-white w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-purple-600 checked:border-purple-600"
+                                            id="checkbox1" />
+                                        <span
+                                            class="absolute z-20 text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                stroke-width="1">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div><label for=""> Healthcare
+                                </label>
+                            </a>
+
+
+                        </li>
+                        <li class="flex flex-row justify-between group1">
+                            <a class="m-0 flex flex-row gap-2" href="#">
+                                <div class="inline-flex items-center">
+                                    <label class="flex items-center cursor-pointer relative">
+                                        <input type="checkbox"
+                                            class="peer h-5 bg-white w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-purple-600 checked:border-purple-600"
+                                            id="checkbox1" />
+                                        <span
+                                            class="absolute z-20 text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                stroke-width="1">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div><label for=""> Household Needs
+                                </label>
+                            </a>
+
+
+                        </li>
+                    </ul>
                 </div>
             </div>
-
-            <script>
-            function changeImage(src) {
-                document.getElementById('mainImage').src = src;
-            }
-            </script>
-        </div>
-        <!-- Description Review -->
-        <nav>
-            <ul class="flex space-x-4" id="nav">
-                <li><a href="#" class="text-black text-xl pb-4 nav-link  border-black"
-                        onclick="showContent('content1', this)">Description</a>
-                </li>
-                <li><a href="#" class="text-gray-400 nav-link pb-4 ms-4 text-xl border-black"
-                        onclick="showContent('content2', this)">Reviews (3)</a></li>
-            </ul>
-        </nav>
-
-        <div id="content1" class="mt-4 content p-4 ps-0">
-
-            <p class="text-gray-600">Quisque varius diam vel metus mattis, id aliquam diam rhoncus. Proin vitae magna in
-                dui finibus malesuada
-                et at nulla. Morbi elit ex, viverra vitae ante vel, blandit feugiat ligula. Fusce fermentum iaculis
-                nibh, at sodales leo maximus a. Nullam ultricies sodales nunc, in pellentesque lorem mattis quis. Cras
-                imperdiet est in nunc tristique lacinia. Nullam aliquam mauris eu accumsan tincidunt. Suspendisse velit
-                ex, aliquet vel ornare vel, dignissim a tortor.</p>
-            <p class="text-gray-600 mt-4">Morbi ut sapien vitae odio accumsan gravida. Morbi vitae erat auctor, eleifend
-                nunc
-                a, lobortis neque.
-                Praesent aliquam dignissim viverra. Maecenas lacus odio, feugiat eu nunc sit amet, maximus sagittis
-                dolor. Vivamus nisi sapien, elementum sit amet eros sit amet, ultricies cursus ipsum. Sed consequat
-                luctus ligula. Curabitur laoreet rhoncus blandit. Aenean vel diam ut arcu pharetra dignissim ut sed leo.
-                Vivamus faucibus, ipsum in vestibulum vulputate, lorem orci convallis quam, sit amet consequat nulla
-                felis pharetra lacus. Duis semper erat mauris, sed egestas purus commodo vel.</p>
-        </div>
-        <div id="content2" class="mt-4 content p-4 ps-0">
-            <h2 class="text-xl font-bold">3 reviews for 100 Percent Apple Juice – 64 fl oz Bottle</h2>
+            <hr class="bg-gray-200 mt-4 mb-4">
             <div>
-                <div class="flex flex-row items-center">
-                    <div class="text-7xl p-4">4.00</div>
-                    <div class="flex flex-col p-4">
-                        <div class="flex items-center justify-between flex-row">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="size-10 text-yellow-500">
-                                <path fill-rule="evenodd"
-                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="size-10 text-yellow-500">
-                                <path fill-rule="evenodd"
-                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="size-10 text-yellow-500">
-                                <path fill-rule="evenodd"
-                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="size-10 text-yellow-500">
-                                <path fill-rule="evenodd"
-                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="size-10 text-yellow-500">
-                                <path fill-rule="evenodd"
-                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                        <div>Average of <span class="font-bold"> 3 reviews</span></div>
-                    </div>
-                    <div class="flex w-1/3 ms-12 flex-col items-center justify-evenly">
-                        <div class="w-full p-0 m-0 flex flex-row items-center justify-between"><svg
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="size-6 text-yellow-500">
-                                <path fill-rule="evenodd"
-                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                    clip-rule="evenodd" />
-                            </svg><a href="#" class="p-2">5 </a>
-                            <div class="w-full ms-1 mt-3 bg-gray-200 rounded-full h-2.5 mb-3 dark:bg-gray-700">
-                                <div class="h-2.5 ms-0 rounded-full" style="
-                width: 40%;
-                background-image: linear-gradient(
-                  to right,
-                  yellow,
-                  orange,
-                  red
-                );
-              "></div>
-                            </div>
-                            <span class="p-4">1</span>
-                        </div>
-                        <div class="w-full p-0 m-0 flex flex-row items-center justify-between"><svg
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="size-6 text-yellow-500">
-                                <path fill-rule="evenodd"
-                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                    clip-rule="evenodd" />
-                            </svg><a href="#" class="p-2">4 </a>
-                            <div class="w-full ms-1 mt-3 bg-gray-200 rounded-full h-2.5 mb-3 dark:bg-gray-700">
-                                <div class="h-2.5 ms-0 rounded-full" style="
-                width: 90%;
-                background-image: linear-gradient(
-                  to right,
-                  yellow,
-                  orange,
-                  red
-                );
-              "></div>
-                            </div>
-                            <span class="p-4">1</span>
-                        </div>
-                        <div class="w-full p-0 m-0  flex flex-row items-center justify-between"><svg
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="size-6 text-yellow-500">
-                                <path fill-rule="evenodd"
-                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                    clip-rule="evenodd" />
-                            </svg><a href="#" class="p-2">3 </a>
-                            <div class="w-full ms-1 mt-3 bg-gray-200 rounded-full h-2.5 mb-3 dark:bg-gray-700">
-                                <div class="h-2.5 ms-0 rounded-full" style="
-                width: 60%;
-                background-image: linear-gradient(
-                  to right,
-                  yellow,
-                  orange,
-                  red
-                );
-              "></div>
-                            </div>
-                            <span class="p-4">1</span>
-                        </div>
-                        <div class="w-full p-0 m-0  flex flex-row items-center justify-between"><svg
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="size-6 text-yellow-500">
-                                <path fill-rule="evenodd"
-                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                    clip-rule="evenodd" />
-                            </svg><a href="#" class="p-2">2 </a>
-                            <div class="w-full ms-1 mt-3 bg-gray-200 rounded-full h-2.5 mb-3 dark:bg-gray-700">
-                                <div class="h-2.5 ms-0 rounded-full" style="
-                width: 30%;
-                background-image: linear-gradient(
-                  to right,
-                  yellow,
-                  orange,
-                  red
-                );
-              "></div>
-                            </div>
-                            <span class="p-4">0</span>
-                        </div>
-                        <div class="w-full p-0 m-0  flex flex-row items-center justify-between"><svg
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="size-6 text-yellow-500">
-                                <path fill-rule="evenodd"
-                                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                    clip-rule="evenodd" />
-                            </svg><a href="#" class="p-2">1 </a>
-                            <div class="w-full ms-1 mt-3 bg-gray-200 rounded-full h-2.5 mb-3 dark:bg-gray-700">
-                                <div class="h-2.5 ms-0 rounded-full" style="
-                width: 10%;
-                background-image: linear-gradient(
-                  to right,
-                  yellow,
-                  orange,
-                  red
-                );
-              "></div>
-                            </div>
-                            <span class="p-4">0</span>
-                        </div>
-                    </div>
-                </div>
-                <div></div>
-            </div>
-            <!-- Review of user -->
-            <div class="bg-white">
-                <div class="container p-2 mx-auto xl:px-0">
-                    <div class="grid gap-6">
-                        <div class="">
-                            <div
-                                class="flex flex-col px-6 w-full h-full bg-white dark:bg-gray-800 md:px-14 rounded-2xl dark:bg-trueGray-800">
-                                <div class="flex flex-row items-center ms-[5.5%]">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                        class="size-6 text-yellow-500">
-                                        <path fill-rule="evenodd"
-                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                        class="size-6 text-yellow-500">
-                                        <path fill-rule="evenodd"
-                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                        class="size-6 text-yellow-500">
-                                        <path fill-rule="evenodd"
-                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                        class="size-6 text-yellow-500">
-                                        <path fill-rule="evenodd"
-                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                        class="size-6 text-yellow-500">
-                                        <path fill-rule="evenodd"
-                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                </div>
+                <h4 class="text-md">Filter by Color</h4>
+                <div>
+                    <ul>
+                        <li class="flex flex-row justify-between mt-2"><a class="m-0 flex flex-row gap-2" href="#">
+                                <div class="inline-flex items-center">
+                                    <label class="flex items-center cursor-pointer relative">
+                                        <input type="checkbox"
+                                            class="peer h-5 bg-green-600 checked:bg-green-600 rounded-full w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-lg border border-green-600 checked:bg-green-600 checked:border-green-600"
+                                            id="checkbox1" />
+                                        <span
+                                            class="absolute z-20 text-white opacity-0 bg-green-600 hover:opacity-100 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                stroke-width="1">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div><label for="">Green
+                                </label>
+                            </a>
+                            <span class="m-0 text-gray-400">(1)</span>
+                        </li>
+                        <li class="flex flex-row justify-between mt-2"><a class="m-0 flex flex-row gap-2" href="#">
+                                <div class="inline-flex items-center">
+                                    <label class="flex items-center cursor-pointer relative">
+                                        <input type="checkbox"
+                                            class="peer h-5 bg-black checked:bg-black rounded-full w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-lg border border-black checked:bg-black checked:border-black"
+                                            id="checkbox1" />
+                                        <span
+                                            class="absolute z-20 text-white opacity-0 bg-black hover:opacity-100 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                stroke-width="1">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div><label for="">Black
+                                </label>
+                            </a>
+                            <span class="m-0 text-gray-400">(1)</span>
+                        </li>
+                        <li class="flex flex-row justify-between mt-2"><a class="m-0 flex flex-row gap-2" href="#">
+                                <div class="inline-flex items-center">
+                                    <label class="flex items-center cursor-pointer relative">
+                                        <input type="checkbox"
+                                            class="peer h-5 bg-blue-600 checked:bg-blue-600 rounded-full w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-lg border border-blue-600 checked:bg-blue-600 checked:border-blue-600"
+                                            id="checkbox1" />
+                                        <span
+                                            class="absolute z-20 text-white opacity-0 bg-blue-600 hover:opacity-100 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                stroke-width="1">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div><label for="">Blue
+                                </label>
+                            </a>
+                            <span class="m-0 text-gray-400">(1)</span>
+                        </li>
+                        <li class="flex flex-row justify-between mt-2"><a class="m-0 flex flex-row gap-2" href="#">
+                                <div class="inline-flex items-center">
+                                    <label class="flex items-center cursor-pointer relative">
+                                        <input type="checkbox"
+                                            class="peer h-5 bg-[#DD9933] checked:bg-[#DD9933] rounded-full w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-lg border border-[#DD9933] checked:bg-[#DD9933] checked:border-[#DD9933]"
+                                            id="checkbox1" />
+                                        <span
+                                            class="absolute z-20 text-white opacity-0 bg-[#DD9933] hover:opacity-100 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                stroke-width="1">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div><label for="">Brown
+                                </label>
+                            </a>
+                            <span class="m-0 text-gray-400">(1)</span>
+                        </li>
+                        <li class="flex flex-row justify-between mt-2"><a class="m-0 flex flex-row gap-2" href="#">
+                                <div class="inline-flex items-center">
+                                    <label class="flex items-center cursor-pointer relative">
+                                        <input type="checkbox"
+                                            class="peer h-5 bg-[#9E9E9E] checked:bg-[#9E9E9E] rounded-full w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-lg border border-[#9E9E9E] checked:bg-[#9E9E9E] checked:border-[#9E9E9E]"
+                                            id="checkbox1" />
+                                        <span
+                                            class="absolute z-20 text-white opacity-0 bg-[#9E9E9E] hover:opacity-100 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                stroke-width="1">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div><label for="">Gray
+                                </label>
+                            </a>
+                            <span class="m-0 text-gray-400">(1)</span>
+                        </li>
+                        <li class="flex flex-row justify-between mt-2"><a class="m-0 flex flex-row gap-2" href="#">
+                                <div class="inline-flex items-center">
+                                    <label class="flex items-center cursor-pointer relative">
+                                        <input type="checkbox"
+                                            class="peer h-5 bg-[#DD3333] checked:bg-[#DD3333] rounded-full w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-lg border border-[#DD3333] checked:bg-[#DD3333] checked:border-[#DD3333]"
+                                            id="checkbox1" />
+                                        <span
+                                            class="absolute z-20 text-white opacity-0 bg-[#DD3333] hover:opacity-100 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                stroke-width="1">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div><label for="">Red
+                                </label>
+                            </a>
+                            <span class="m-0 text-gray-400">(1)</span>
+                        </li>
 
-                                <div class="flex items-center space-x-3">
-                                    <div class="ms-0 flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
-                                        <img alt="Avatar"
-                                            src="https://images.unsplash.com/photo-1511485977113-f34c92461ad9?crop=faces&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjIwMTQ5ODEx&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=100&amp;h=100"
-                                            loading="lazy" />
-                                    </div>
-                                    <div>
-                                        <div class="text-lg font-medium text-gray-200">Sarah Steiner</div>
-                                        <div class="text-gray-600 dark:text-gray-400">VP Sales at Google</div>
-                                    </div>
-
-                                </div>
-
-                                <p class="text-lg leading-normal dark:text-gray-300">Share a <mark
-                                        class="mx-1 text-indigo-800 bg-indigo-100 rounded-md ring-indigo-100 ring-4 dark:ring-indigo-900 dark:bg-indigo-900 dark:text-indigo-200">testimonial</mark>
-                                    that hits some of your benefits from one of your popular customers.</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="">
-                            <div
-                                class="flex flex-col w-full h-full px-6 bg-white dark:bg-gray-800 md:px-14 rounded-2xl  dark:bg-trueGray-800">
-                                <div class="flex flex-row items-center ms-[5.5%]">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                        class="size-6 text-yellow-500">
-                                        <path fill-rule="evenodd"
-                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                        class="size-6 text-yellow-500">
-                                        <path fill-rule="evenodd"
-                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                        class="size-6 text-yellow-500">
-                                        <path fill-rule="evenodd"
-                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                        class="size-6 text-yellow-500">
-                                        <path fill-rule="evenodd"
-                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                        class="size-6 text-yellow-500">
-                                        <path fill-rule="evenodd"
-                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <div class="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
-                                        <img alt="Avatar"
-                                            src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;crop=faces&amp;fit=crop&amp;w=100&amp;h=100&amp;q=80"
-                                            loading="lazy" />
-                                    </div>
-                                    <div>
-                                        <div class="text-lg font-medium text-gray-200">Dylan Ambrose</div>
-                                        <div class="text-gray-600 dark:text-gray-400">Lead marketer at Netflix </div>
-                                    </div>
-
-                                </div>
-                                <p class="text-lg leading-normal dark:text-gray-300">Make sure you only pick the <mark
-                                        class="mx-1 text-indigo-800 bg-indigo-100 rounded-md ring-indigo-100 ring-4 dark:ring-indigo-900 dark:bg-indigo-900 dark:text-indigo-200">right
-                                        sentence</mark> to keep it short and simple.</p>
-
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="">
-                            <div
-                                class="flex flex-col w-full h-full px-6 bg-white dark:bg-gray-800 md:px-14 rounded-2xl  dark:bg-trueGray-800">
-                                <div class="flex flex-row items-center ms-[5.5%]">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                        class="size-6 text-yellow-500">
-                                        <path fill-rule="evenodd"
-                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                        class="size-6 text-yellow-500">
-                                        <path fill-rule="evenodd"
-                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                        class="size-6 text-yellow-500">
-                                        <path fill-rule="evenodd"
-                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                        class="size-6 text-yellow-500">
-                                        <path fill-rule="evenodd"
-                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                        class="size-6 text-yellow-500">
-                                        <path fill-rule="evenodd"
-                                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <div class="flex-shrink-0 overflow-hidden rounded-full w-14 h-14">
-                                        <img alt="Avatar"
-                                            src="https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=100&amp;h=100&amp;crop=faces&amp;q=80"
-                                            loading="lazy" />
-                                    </div>
-                                    <div>
-                                        <div class="text-lg font-medium text-gray-200">Gabrielle Winn</div>
-                                        <div class="text-gray-600 dark:text-gray-400">Co-founder of Acme Inc</div>
-                                    </div>
-
-                                </div>
-
-                                <p class="text-lg leading-normal dark:text-gray-300">This is an <mark
-                                        class="mx-1 text-indigo-800 bg-indigo-100 rounded-md ring-indigo-100 ring-4 dark:ring-indigo-900 dark:bg-indigo-900 dark:text-indigo-200">awesome</mark>
-                                    landing page template I've seen. I would use this for anything.</p>
-                            </div>
-                        </div>
-                    </div>
+                    </ul>
                 </div>
             </div>
-            <hr>
-            <h2 class="text-xl font-bold p-4">Add a review</h2>
-            <div class="text-gray-500 p-4">Your email address will not be published. Required fields are marked *</div>
-            <div class="text-md text-gray-800 p-4">Your rating *</div>
-            <div class="flex flex-row items-center gap-6 p-4">
-                <div class="flex flex-row items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                        class="size-6 text-black hover:text-yellow-500">
-                        <path fill-rule="evenodd"
-                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </div>
-                <div class="flex flex-row items-center border-l-2 group ps-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                        class="size-6 text-black group-hover:text-yellow-500">
-                        <path fill-rule="evenodd"
-                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                        class="size-6 text-black group-hover:text-yellow-500">
-                        <path fill-rule="evenodd"
-                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </div>
-                <div class="flex flex-row items-center border-l-2 group ps-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                        class="size-6 text-black group-hover:text-yellow-500">
-                        <path fill-rule="evenodd"
-                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                        class="size-6 text-black group-hover:text-yellow-500">
-                        <path fill-rule="evenodd"
-                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                        class="size-6 text-black group-hover:text-yellow-500">
-                        <path fill-rule="evenodd"
-                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </div>
-                <div class="flex flex-row items-center border-l-2 group ps-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                        class="size-6 text-black group-hover:text-yellow-500">
-                        <path fill-rule="evenodd"
-                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                        class="size-6 text-black group-hover:text-yellow-500">
-                        <path fill-rule="evenodd"
-                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                        class="size-6 text-black group-hover:text-yellow-500">
-                        <path fill-rule="evenodd"
-                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                        class="size-6 text-black group-hover:text-yellow-500">
-                        <path fill-rule="evenodd"
-                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </div>
-                <div class="flex flex-row items-center border-l-2 group ps-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                        class="size-6 text-black group-hover:text-yellow-500">
-                        <path fill-rule="evenodd"
-                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                        class="size-6 text-black group-hover:text-yellow-500">
-                        <path fill-rule="evenodd"
-                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                        class="size-6 text-black group-hover:text-yellow-500">
-                        <path fill-rule="evenodd"
-                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                        class="size-6 text-black group-hover:text-yellow-500">
-                        <path fill-rule="evenodd"
-                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                        class="size-6 text-black group-hover:text-yellow-500">
-                        <path fill-rule="evenodd"
-                            d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                            clip-rule="evenodd" />
-                    </svg>
+            <hr class="bg-gray-200 mt-4 mb-4">
+            <div>
+                <h4 class="text-md font-semibold"> Filter by Brands</h4>
+                <div>
+                    <ul>
+                        <li class="flex flex-row justify-between mt-2"><a class="m-0 flex flex-row gap-2" href="#">
+                                <div class="inline-flex items-center">
+                                    <label class="flex items-center cursor-pointer relative">
+                                        <input type="checkbox"
+                                            class="peer h-5 bg-white w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-purple-600 checked:border-purple-600"
+                                            id="checkbox1" />
+                                        <span
+                                            class="absolute z-20 text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                stroke-width="1">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div><label for="">Fresh
+                                </label>
+                            </a>
+                            <span class="m-0 text-gray-400">(1)</span>
+                        </li>
+                        <li class="flex flex-row justify-between mt-2"><a class="m-0 flex flex-row gap-2" href="#">
+                                <div class="inline-flex items-center">
+                                    <label class="flex items-center cursor-pointer relative">
+                                        <input type="checkbox"
+                                            class="peer h-5 bg-white w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-purple-600 checked:border-purple-600"
+                                            id="checkbox1" />
+                                        <span
+                                            class="absolute z-20 text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                stroke-width="1">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div><label for="">Aptamil
+                                </label>
+                            </a>
+                            <span class="m-0 text-gray-400">(1)</span>
+                        </li>
+                        <li class="flex flex-row justify-between mt-2"><a class="m-0 flex flex-row gap-2" href="#">
+                                <div class="inline-flex items-center">
+                                    <label class="flex items-center cursor-pointer relative">
+                                        <input type="checkbox"
+                                            class="peer h-5 bg-white w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-purple-600 checked:border-purple-600"
+                                            id="checkbox1" />
+                                        <span
+                                            class="absolute z-20 text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                stroke-width="1">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div><label for="">Babyganics
+                                </label>
+                            </a>
+                            <span class="m-0 text-gray-400">(1)</span>
+                        </li>
+                        <li class="flex flex-row justify-between mt-2"><a class="m-0 flex flex-row gap-2" href="#">
+                                <div class="inline-flex items-center">
+                                    <label class="flex items-center cursor-pointer relative">
+                                        <input type="checkbox"
+                                            class="peer h-5 bg-white w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-purple-600 checked:border-purple-600"
+                                            id="checkbox1" />
+                                        <span
+                                            class="absolute z-20 text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                stroke-width="1">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div><label for="">Dove
+                                </label>
+                            </a>
+                            <span class="m-0 text-gray-400">(1)</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <form action="" class="p-4">
-                <div class="text-md text-gray-800 ">Your review *</div>
-                <div class="text-md text-gray-800"><textarea class="border-2 border-gray-200 rounded-2xl" name="ta"
-                        id="" cols="110" rows="7"></textarea></div>
-                <div class="text-md text-gray-800 pt-2">Name *</div>
-                <div class="pt-2">
-                    <input type="text" name="name" id=""
-                        class="h-10 w-2/3 bg-white border-2 border-gray-200 rounded-lg">
+            <hr class="bg-gray-200 mt-4 mb-4">
+            <div>
+                <h4 class="text-md font-semibold"> Product Status</h4>
+                <div>
+                    <ul>
+                        <li class="flex flex-row justify-between mt-2"><a class="m-0 flex flex-row gap-2" href="#">
+                                <div class="inline-flex items-center">
+                                    <label class="flex items-center cursor-pointer relative">
+                                        <input type="checkbox"
+                                            class="peer h-5 bg-white w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-purple-600 checked:border-purple-600"
+                                            id="checkbox1" />
+                                        <span
+                                            class="absolute z-20 text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                stroke-width="1">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div><label for="">In Stock
+                                </label>
+                            </a>
+                            <span class="m-0 text-gray-400">(1)</span>
+                        </li>
+                        <li class="flex flex-row justify-between mt-2"><a class="m-0 flex flex-row gap-2" href="#">
+                                <div class="inline-flex items-center">
+                                    <label class="flex items-center cursor-pointer relative">
+                                        <input type="checkbox"
+                                            class="peer h-5 bg-white w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-purple-600 checked:border-purple-600"
+                                            id="checkbox1" />
+                                        <span
+                                            class="absolute z-20 text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class=" h-3.5 w-3.5"
+                                                viewBox="0 0 20 20" fill="currentColor" stroke="currentColor"
+                                                stroke-width="1">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div><label for="">On Sale
+                                </label>
+                            </a>
+                            <span class="m-0 text-gray-400">(1)</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="text-md text-gray-800 pt-2">Email *</div>
-
-                <div class="pt-2">
-                    <input type="email" name="email" id=""
-                        class="h-10 w-2/3 bg-white border-2 border-gray-200 rounded-lg">
-                </div>
-                <div class="pt-3 flex gap-2 items-center">
-                    <input type="checkbox" name="cn" id="">
-                    <span class="">
-                        Save my name, email, and website in this browser for the next time I comment.</span>
-                </div>
-                <button type="submit" class="bg-purple-600 text-white rounded-xl px-9 mt-3 py-2.5">Submit</button>
-            </form>
+            </div>
         </div>
-        <h2 class="text-xl font-bold p-4">Related products</h2>
-        <h2 class="text-xl font-bold p-4">Recently viewed items</h2>
+        <div class="content ml-5 p-4 flex flex-col">
+            <ul class="m-0 ms-0 flex mt-2 text-gray-400  mb-4">
+                <li class="m-0 p-0"><i class="fa-solid fa-x text-sm text-black ml-1"></i><span class="m-0 ms-2">Clear
+                        filters</span></li>
+                <li class="m-0 p-0 ms-3"><i class="fa-solid fa-x text-sm text-black ml-1"></i><span
+                        class="m-0 ms-2">Green</span></li>
+            </ul>
+            <div class="m-0">
+                <img src="http://localhost/images/Filter_cat1.PNG" alt="..." class="object-fit">
+            </div>
+            <div class="bg-[#F3F4F6] w-full flex flex-row py-3 px-2 rounded-xl mt-2">
+                <div class=" w-[20%]">
+                    <p class="text-gray-600">Showing the single result</p>
+                </div>
+                <div class="w-[30%]"></div>
+                <div class="flex w-[50%]">
+                    <div class="m-0 flex flex-row items-center text-gray-400">Sort:
+                        <form class="max-w-sm mx-auto ms-2 border-0">
+                            <select id="countries"
+                                class="bg-[#F3F4F6] focus:outline-none border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-500">
+                                <option selected>Sort by latest</option>
+                                <option value="av">Sort by average rating</option>
+                                <option value="pop">Sort by popularity</option>
+                                <option value="LH">Sort by price:low to high</option>
+                                <option value="HL">Sort by price:high to low</option>
+                            </select>
+                        </form>
+                        <div class="m-0 flex flex-row items-center text-gray-400 ms-5">Show:</div>
+                        <form class="max-w-sm mx-auto">
+                            <select id="countries"
+                                class="bg-[#F3F4F6] focus:outline-none border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-500">
+                                <option selected>20 items</option>
+                                <option value="40">40 items</option>
+                                <option value="60">60 items</option>
+                                <option value="80">80 items</option>
+                            </select>
+                        </form>
+                        <button class="ms-3"><a href="#"><i
+                                    class="text-xl fa-solid text-gray-600 fa-list"></i></a></button>
+                        <button class="m-3"><a href="#"><i
+                                    class="text-xl fa-solid text-gray-600 fa-cubes"></i></a></button>
+                    </div>
 
-        <script>
-        function showContent(contentId, element) {
-            event.preventDefault();
-            // Ẩn tất cả các nội dung
-            const contents = document.querySelectorAll('.content');
-            contents.forEach(content => {
-                content.style.display = 'none';
-            });
 
-            // Hiện nội dung tương ứng
-            document.getElementById(contentId).style.display = 'block';
-
-            // Xóa lớp 'text-gray-300' khỏi tất cả liên kết và thêm vào liên kết đang được chọn
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                link.classList.remove('text-black', 'border-b-2');
-                link.classList.add('text-gray-400');
-            });
-            element.classList.add('text-black', 'border-b-2');
-            element.classList.remove('text-gray-400');
-        }
-
-        // Hiển thị nội dung đầu tiên khi trang được tải
-        document.addEventListener('DOMContentLoaded', () => {
-            showContent('content1', document.querySelector('.nav-link'));
-        });
-        </script>
+                </div>
+            </div>
+            <div class="w-full h-screen border-2 border-gray-200 mt-3 rounded-lg"></div>
+            <div style="height: 2000px;"></div> <!-- Tạo chiều cao để cuộn -->
+        </div>
     </div>
-    <div class="Footer z-20 pt-12 mt-10 w-full bg-gray-100 h-fit">
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const sidebar = document.getElementById('sidebarSticky');
+        const footer = document.querySelector('.Footer');
+        const sidebarOrigin = sidebar.offsetTop;
+        const sidebarHeight = sidebar.offsetHeight;
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const footerTop = footer.getBoundingClientRect().top;
+            const sidebarBottom = sidebar.getBoundingClientRect().bottom;
+
+            if (scrollY > sidebarOrigin) {
+                if (sidebarBottom >= footerTop) {
+                    // Sidebar has reached the footer
+                    sidebar.style.position = 'absolute';
+                    sidebar.style.top = `${footerTop - sidebarHeight}px`;
+                } else {
+                    // Sidebar is fixed but not at footer yet
+                    sidebar.style.position = 'sticky';
+                    sidebar.style.top = '0px';
+                }
+            } else {
+                // Sidebar is at its original position
+                sidebar.style.position = '';
+                sidebar.style.top = '';
+            }
+        });
+    });
+    </script>
+    <!-- Footer -->
+    <div class="Footer z-20 pt-12 mt-10 m-auto w-full bg-gray-100 h-fit">
         <!-- input email -->
         <div class="flex flex-col lg:flex-row ">
             <div class="ms-0 flex flex-col w-full lg:w-1/2 gap-4">
@@ -2591,7 +2829,8 @@
         <div class="flex flex-col md:flex-row h-fit mt-0 lg:mt-6 w-full">
             <div class="ms-0 flex flex-col gap-4 w-full md:w-1/4 mt-4">
                 <div class="font-medium text-md ms-12">Do You Need Help ?</div>
-                <div class="text-gray-600 w-1/2 text-sm ms-12">Autoseligen syr. Nek diarask fröbomba. Nör antipol kynoda
+                <div class="text-gray-600 w-1/2 text-sm ms-12">Autoseligen syr. Nek diarask fröbomba. Nör antipol
+                    kynoda
                     nynat. Pressa fåmoska.</div>
                 <div href="#"
                     class="ms-7 flex flex-col p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
@@ -2701,6 +2940,7 @@
 
         </div>
     </div>
+
 </body>
 <div class="fixed z-20 inline lg:hidden bottom-0 left-0 right-0 bg-white border-t border-gray-300 shadow-lg">
     <div class="flex items-center justify-evenly p-2">
@@ -2734,5 +2974,7 @@
         </a>
     </div>
 </div>
+
+<script src="/js/filter_cat.js"></script>
 
 </html>

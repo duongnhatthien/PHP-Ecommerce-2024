@@ -38,4 +38,7 @@ $app->router->get('/detailProduct', function() use ($app) {
 $app->router->get('/contact', function() use ($app) {
     echo $app->router->renderFile('contact.php');
 });
+$app->router->get('/filter_cat', function() use ($app) {
+    echo $app->router->renderFile('filter_cat.php');
+});
 $app->run();

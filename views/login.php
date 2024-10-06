@@ -1899,10 +1899,35 @@
                                         <label for="password"
                                             class="block mb-2 text-md font-medium text-gray-900">Password
                                             *</label>
-                                        <input type="password" name="password" id="password"
-                                            class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                                            required="">
+                                        <div class="relative">
+                                            <input name="password" type="password" id="passwordLogin"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                                required="" />
+                                            <button id="togglePasswordLogin"
+                                                class="absolute w-[12%] top-1/2 z-20 right-0.5 transition-transform hover:bg-gray-100 bg-gray-50 translate-y-[-50%] cursor-pointer">
+                                                <i id="iconEyeLogin"
+                                                    class="fa-solid fa-eye-slash text-[#634c9f] text-lg"></i>
+                                            </button>
+                                        </div>
                                     </div>
+                                    <script>
+                                    const passwordInputLogin = document.getElementById('passwordLogin');
+                                    const toggleButtonLogin = document.getElementById('togglePasswordLogin');
+                                    const eyeIconLogin = document.getElementById('iconEyeLogin');
+
+                                    toggleButtonLogin.addEventListener('click', function() {
+                                        event.preventDefault();
+                                        if (passwordInputLogin.type === 'password') {
+                                            passwordInputLogin.type = 'text';
+                                            eyeIconLogin.classList.add('fa-eye');
+                                            eyeIconLogin.classList.remove('fa-eye-slash');
+                                        } else {
+                                            passwordInputLogin.type = 'password';
+                                            eyeIconLogin.classList.add('fa-eye-slash');
+                                            eyeIconLogin.classList.remove('fa-eye');
+                                        }
+                                    });
+                                    </script>
                                     <div class="flex items-center justify-between">
                                         <div class="flex items-start">
                                             <div class="flex items-center h-5 mt-1">
@@ -1945,7 +1970,7 @@
                                     <label for="username" class="block mb-2 font-medium text-gray-900 ">
                                         Username *</label>
                                     <input type="text" name="username" id="username"
-                                        class="bg-gray-50 border text-md border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 text-sm block w-full p-2.5 "
+                                        class="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500"
                                         required="">
                                 </div>
                                 <div>
@@ -1955,9 +1980,33 @@
                                         class="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500" />
                                 </div>
                                 <div>
-                                    <label class="text-gray-800 text-md font-medium block">Password *</label>
-                                    <input name="password" type="password"
-                                        class="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500" />
+                                    <label class="text-gray-800 text-md font-medium block">Password*</label>
+                                    <div class="relative">
+                                        <input name="password" type="password" id="passwordRegister"
+                                            class="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-3 rounded-md outline-blue-500" />
+                                        <button id="togglePasswordRegister"
+                                            class="absolute w-[12%] bg-white top-1/2 z-20 right-0.5 transition-transform hover:bg-white translate-y-[-50%] cursor-pointer">
+                                            <i id="iconEye" class="fa-solid fa-eye-slash text-[#634c9f] text-lg"></i>
+                                        </button>
+                                    </div>
+                                    <script>
+                                    const passwordInput = document.getElementById('passwordRegister');
+                                    const toggleButton = document.getElementById('togglePasswordRegister');
+                                    const eyeIcon = document.getElementById('iconEye');
+
+                                    toggleButton.addEventListener('click', function() {
+                                        event.preventDefault();
+                                        if (passwordInput.type === 'password') {
+                                            passwordInput.type = 'text';
+                                            eyeIcon.classList.add('fa-eye');
+                                            eyeIcon.classList.remove('fa-eye-slash');
+                                        } else {
+                                            passwordInput.type = 'password';
+                                            eyeIcon.classList.add('fa-eye-slash');
+                                            eyeIcon.classList.remove('fa-eye');
+                                        }
+                                    });
+                                    </script>
                                 </div>
                                 <div class="divScroll space-y-6">
                                     <div>

@@ -16,7 +16,7 @@
     }
 
     .divTong {
-        width: 95%;
+        width: 96%;
         height: fit-content;
     }
 
